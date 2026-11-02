@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-02T17:00:00.662643+00:00",
+  "scope": "STCP IETF validation; skipped live tests are not evidence of interoperability",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "source_paths": {
+    "linux": null,
+    "zephyr": null
+  },
+  "summary": {
+    "PASS": 4,
+    "FAIL": 0,
+    "SKIP": 4
+  },
+  "tests": [
+    {
+      "name": "crypto-vectors",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.18,
+      "details": "exit=0\ntest_ack_frame (test_stcp_vectors.STCPVectorTests.test_ack_frame) ... ok\ntest_aead_tampering_rejected (test_stcp_vectors.STCPVectorTests.test_aead_tampering_rejected) ... ok\ntest_data_frame (test_stcp_vectors.STCPVectorTests.test_data_frame) ... ok\ntest_header_flags_and_endianness (test_stcp_vectors.STCPVectorTests.test_header_flags_and_endianness) ... ok\ntest_x25519_and_kdf (test_stcp_vectors.STCPVectorTests.test_x25519_and_kdf) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "name": "rfcxml-parse",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0,
+      "details": "RFCXML v3 parsed"
+    },
+    {
+      "name": "rfcxml-text",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.8,
+      "details": "exit=0\n Created file /tmp/stcp-rfc-5prh8w3h/draft.txt\n"
+    },
+    {
+      "name": "rfcxml-html",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.773,
+      "details": "exit=0\n Created file /tmp/stcp-rfc-5prh8w3h/draft.html\n"
+    },
+    {
+      "name": "linux-source-contract",
+      "status": "SKIP",
+      "category": "offline",
+      "duration_seconds": 0,
+      "details": "supply --linux-source STCP_REPO_ROOT"
+    },
+    {
+      "name": "handshake-source-and-model",
+      "status": "SKIP",
+      "category": "offline",
+      "duration_seconds": 0,
+      "details": "supply both --linux-source and --zephyr-session"
+    },
+    {
+      "name": "linux-af-stcp-live",
+      "status": "SKIP",
+      "category": "live",
+      "duration_seconds": 0,
+      "details": "opt in with --live-linux; requires loaded module"
+    },
+    {
+      "name": "zephyr-external-live",
+      "status": "SKIP",
+      "category": "external-live",
+      "duration_seconds": 0,
+      "details": "no real Zephyr test command supplied; no hardware run claimed"
+    }
+  ]
+}
