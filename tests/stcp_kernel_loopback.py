@@ -8,13 +8,37 @@ Usage: python3 tests/stcp_kernel_loopback.py --port 19533
 No test is silently skipped: unsupported AF_STCP, timeouts and short reads fail.
 """
 import argparse
+import ctypes
 import os
+import struct
 import socket
 import threading
 import traceback
 
 AF_STCP = 45
 STCP_PROTO_TCP = 253
+
+
+# AF_STCP sockets accept IPv4 sockaddr_in addresses. CPython's socket.bind
+# rejects address conversion for the unknown AF_STCP family, so use libc.
+_libc = ctypes.CDLL(None, use_errno=True)
+_libc.bind.argtypes = (ctypes.c_int, ctypes.c_void_p, ctypes.c_uint)
+_libc.bind.restype = ctypes.c_int
+_libc.connect.argtypes = (ctypes.c_int, ctypes.c_void_p, ctypes.c_uint)
+_libc.connect.restype = ctypes.c_int
+
+def _ipv4_sockaddr(host, port):
+    if not (0 <= port <= 65535):
+        raise ValueError("port must be 0..65535")
+    # sin_family is host-endian; sin_port and sin_addr are network-endian.
+    raw = struct.pack("=H", socket.AF_INET) + struct.pack("!H", port) + socket.inet_aton(host) + bytes(8)
+    return ctypes.create_string_buffer(raw)
+
+def _address_call(operation, sock, host, port):
+    addr = _ipv4_sockaddr(host, port)
+    if operation(sock.fileno(), addr, len(addr.raw) - 1) != 0:
+        err = ctypes.get_errno()
+        raise OSError(err, os.strerror(err))
 
 def receive_exact(sock, count):
     result = bytearray()
@@ -35,7 +59,7 @@ def run(host, port, timeout):
         try:
             with socket.socket(AF_STCP, socket.SOCK_STREAM, STCP_PROTO_TCP) as listener:
                 listener.settimeout(timeout)
-                listener.bind((host, port))
+                _address_call(_libc.bind, listener, host, port)
                 listener.listen(1)
                 ready.set()
                 with listener.accept()[0] as peer:
@@ -56,7 +80,7 @@ def run(host, port, timeout):
         try:
             with socket.socket(AF_STCP, socket.SOCK_STREAM, STCP_PROTO_TCP) as client:
                 client.settimeout(timeout)
-                client.connect((host, port))
+                _address_call(_libc.connect, client, host, port)
                 client.sendall(payload)
                 if receive_exact(client, len(response)) != response:
                     raise AssertionError("Client received corrupted data")
