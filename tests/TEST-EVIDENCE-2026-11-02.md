@@ -79,3 +79,35 @@ The latest reported 5/5 PASS was preserved as the **commit message** of
 The file change in that commit is only a blank line in README.md; this
 report provides a discoverable evidence record without claiming the
 commit added an executable test log.
+
+
+## Live Linux kernel integration test — developer-reported PASS
+
+On 2026-11-02 the developer compiled and ran the standalone C test
+`tests/stcp_kernel_loopback.c` from commit
+`7e51b73ef0c91560655aa6168ca8215ebb3a6a01`
+on the `devaus` host, with the STCP module installed and loaded.
+The host kernel identified in the session was
+`7.3.0-rc7-next-20261016-nyt-rokkaa`.
+
+Command:
+
+    cd /srv/stcp-project/ietf && git pull --ff-only origin main && gcc -O2 -Wall -Wextra -pthread -o /tmp/stcp-ietf-loopback tests/stcp_kernel_loopback.c && timeout 45s /tmp/stcp-ietf-loopback 19533
+
+Observed output:
+
+    PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes
+    LIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.
+
+The test uses blocking AF_STCP / SOCK_STREAM / STCP_PROTO_TCP
+sockets with IPv4 sockaddr_in on loopback. It compares deterministic
+binary data transferred in both directions. This is a live
+implementation-backed socket transport test, unlike the independent
+Python known-answer tests and static source-contract tests.
+
+**Evidence boundary:** This result comes from developer-supplied console
+output; it has not been independently reproduced or accompanied by
+a packet capture. It does not prove byte-for-byte agreement of the
+kernel's crypto functions with the published vectors, cryptographic
+peer authentication, UDP operation, or Linux/Zephyr interoperability.
+The kernel was not changed for this test.
