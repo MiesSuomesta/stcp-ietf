@@ -40,3 +40,24 @@ jobs:
         run: python -c "import xml.etree.ElementTree as ET; root=ET.parse('internet-draft/draft-paxsudos-stcp-00.xml').getroot(); assert root.tag == 'rfc' and root.attrib.get('version') == '3'"
       - name: Validate and render Internet-Draft
         run: xml2rfc --text --out /tmp/draft-paxsudos-stcp-00.txt internet-draft/draft-paxsudos-stcp-00.xml
+
+  robot:
+    name: Offline robot test matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install vector and RFCXML dependencies
+        run: python -m pip install 'cryptography>=46,<50' 'xml2rfc>=3,<4'
+      - name: Run offline robot
+        run: python tests/stcp_test_robot.py --report tests/robot-report.json
+      - name: Upload robot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stcp-robot-offline-evidence
+          path: tests/robot-report.json
+          if-no-files-found: warn
