@@ -2,7 +2,7 @@
 
 **Status:** Source review in progress; not an audit certification.  
 **Proposed author:** Lauri Jakku, Paxsudos IT.  
-**Target:** Individual Internet-Draft `draft-paxsudos-stcp-00`, intended status Experimental.
+**Target:** Individual Internet-Draft `draft-paxsudos-stcp-00`, intended status Standards Track (targeting Proposed Standard; not yet submitted to or approved by the IETF).
 
 ## 1. Wire format and framing (review 01)
 
