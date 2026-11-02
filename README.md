@@ -12,3 +12,4 @@ STCP (Secure Transport Communication Protocol) — IETF Internet-Draft developme
 The intended status expresses the standardization goal, not an existing IETF approval. The specification must accurately describe the implementation, including security limitations, interoperability and IANA considerations.
 
 See [the technical source review](internet-draft/STCP-IETF-technical-review.md) for implementation findings and remaining work.
+
