@@ -9,7 +9,9 @@ No test is silently skipped: unsupported AF_STCP, timeouts and short reads fail.
 """
 import argparse
 import ctypes
+import errno
 import os
+import select
 import struct
 import socket
 import threading
@@ -26,6 +28,8 @@ _libc.bind.argtypes = (ctypes.c_int, ctypes.c_void_p, ctypes.c_uint)
 _libc.bind.restype = ctypes.c_int
 _libc.connect.argtypes = (ctypes.c_int, ctypes.c_void_p, ctypes.c_uint)
 _libc.connect.restype = ctypes.c_int
+_libc.accept.argtypes = (ctypes.c_int, ctypes.c_void_p, ctypes.c_void_p)
+_libc.accept.restype = ctypes.c_int
 
 def _ipv4_sockaddr(host, port):
     if not (0 <= port <= 65535):
@@ -39,6 +43,37 @@ def _address_call(operation, sock, host, port):
     if operation(sock.fileno(), addr, len(addr.raw) - 1) != 0:
         err = ctypes.get_errno()
         raise OSError(err, os.strerror(err))
+
+def _connect_with_timeout(sock, host, port, timeout):
+    try:
+        _address_call(_libc.connect, sock, host, port)
+        return
+    except OSError as exc:
+        if exc.errno not in (errno.EINPROGRESS, errno.EALREADY, errno.EWOULDBLOCK):
+            raise
+    _, writable, exceptional = select.select([], [sock], [sock], timeout)
+    if not writable and not exceptional:
+        raise TimeoutError("AF_STCP connect timed out")
+    error = sock.getsockopt(socket.SOL_SOCKET, socket.SO_ERROR)
+    if error:
+        raise OSError(error, os.strerror(error))
+    if not writable:
+        raise OSError("AF_STCP connect became exceptional without SO_ERROR")
+
+def _accept_with_timeout(listener, timeout):
+    readable, _, _ = select.select([listener], [], [], timeout)
+    if not readable:
+        raise TimeoutError("AF_STCP accept timed out")
+    # NULL address pointers avoid CPython's AF_STCP sockaddr decoding.
+    fd = _libc.accept(listener.fileno(), None, None)
+    if fd < 0:
+        error = ctypes.get_errno()
+        raise OSError(error, os.strerror(error))
+    try:
+        return socket.socket(AF_STCP, socket.SOCK_STREAM, STCP_PROTO_TCP, fileno=fd)
+    except BaseException:
+        os.close(fd)
+        raise
 
 def receive_exact(sock, count):
     result = bytearray()
@@ -62,7 +97,7 @@ def run(host, port, timeout):
                 _address_call(_libc.bind, listener, host, port)
                 listener.listen(1)
                 ready.set()
-                with listener.accept()[0] as peer:
+                with _accept_with_timeout(listener, timeout) as peer:
                     peer.settimeout(timeout)
                     received = receive_exact(peer, len(payload))
                     if received != payload:
@@ -80,7 +115,7 @@ def run(host, port, timeout):
         try:
             with socket.socket(AF_STCP, socket.SOCK_STREAM, STCP_PROTO_TCP) as client:
                 client.settimeout(timeout)
-                _address_call(_libc.connect, client, host, port)
+                _connect_with_timeout(client, host, port, timeout)
                 client.sendall(payload)
                 if receive_exact(client, len(response)) != response:
                     raise AssertionError("Client received corrupted data")
