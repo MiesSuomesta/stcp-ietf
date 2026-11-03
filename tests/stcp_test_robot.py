@@ -49,6 +49,7 @@ def main():
         except (OSError, subprocess.TimeoutExpired) as exc:
             record(name, "FAIL", str(exc), time.monotonic()-start, category)
     command("crypto-vectors", [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_stcp_vectors.py", "-v"], args.timeout)
+    command("zephyr-interop-adapter-contract", [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_zephyr_interop_contract.py", "-v"], args.timeout)
     xml = ROOT / "internet-draft/draft-paxsudos-stcp-00.xml"
     try:
         root = ET.parse(xml).getroot()
