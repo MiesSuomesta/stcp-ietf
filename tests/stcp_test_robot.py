@@ -26,12 +26,17 @@ def main():
     p.add_argument("--live-repeat", type=int, default=100)
     p.add_argument("--external-zephyr-command", nargs="+", help="operator-provided real Zephyr interop test executable and arguments")
     p.add_argument("--external-zephyr-repeat", type=int, default=1)
+    p.add_argument("--live-suite", action="store_true", help="run TCP and UDP live regression suites")
+    p.add_argument("--suite-base-port", type=int, default=19800)
     p.add_argument("--timeout", type=int, default=45)
     p.add_argument("--report", type=Path, default=ROOT / "tests" / "robot-report.json")
     args = p.parse_args()
     if not (1 <= args.live_port <= 65535) or args.live_repeat < 1 or args.external_zephyr_repeat < 1 or args.timeout < 1:
         p.error("invalid port, repeat count or timeout")
+    if args.live_suite and not 1024 <= args.suite_base_port <= 65520:
+        p.error("suite base port must be 1024..65520")
     results = []
+    child_suites = []
     def record(name, status, details, elapsed=0, category="offline"):
         results.append(dict(name=name, status=status, category=category, duration_seconds=round(elapsed, 3), details=details[-12000:]))
         print(f"[{status}] {name} ({elapsed:.2f}s)", flush=True)
@@ -89,8 +94,43 @@ def main():
             if results[-1]["status"] == "FAIL": break
     else:
         record("zephyr-external-live", "SKIP", "no real Zephyr test command supplied; no hardware run claimed", category="external-live")
+    if args.live_suite:
+        # Each child produces its own detailed JSON evidence.
+        # The parent counts one PASS/FAIL per suite, avoiding double-counting.
+        suite_dir = args.report.parent / (args.report.stem + "-suites")
+        suite_dir.mkdir(parents=True, exist_ok=True)
+        base = args.suite_base_port
+        suite_specs = [
+            ("tcp-stress", "stcp_stress_robot.py", ["--sequential", "200", "--parallel", "10", "--waves", "10", "--base-port", str(base), "--timeout", str(args.timeout)]),
+            ("tcp-payload", "stcp_payload_robot.py", ["--repeat", "5", "--port", str(base+12), "--timeout", str(args.timeout)]),
+            ("tcp-lifecycle", "stcp_lifecycle_robot.py", ["--connections", "100", "--repeat", "5", "--port", str(base+13), "--timeout", "120"]),
+            ("udp-smoke", "stcp_udp_probe_robot.py", ["--repeat", "1", "--port", str(base+14), "--timeout", str(args.timeout)]),
+            ("udp-matrix", "stcp_udp_matrix_robot.py", ["--repeat", "3", "--parallel", "4", "--waves", "3", "--base-port", str(base), "--timeout", str(args.timeout)])
+        ]
+        for suite_name, script, options in suite_specs:
+            path = suite_dir / (suite_name + ".json")
+            # Per-case timeout belongs to child; generous overall bound here.
+            command("suite-" + suite_name, [sys.executable, str(ROOT/"tests"/script), *options, "--report", str(path)], args.timeout * 500, category="live-suite")
+            status = results[-1]["status"]
+            child_summary = None
+            try:
+                child_summary = json.loads(path.read_text())["summary"]
+                if not all(isinstance(child_summary.get(k), int) for k in ("PASS", "FAIL", "SKIP")):
+                    raise ValueError("invalid child summary")
+                if child_summary["FAIL"] or child_summary["PASS"] == 0:
+                    status = "FAIL"
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                status = "FAIL"
+                results[-1]["details"] += "\\nChild report invalid or missing: " + str(exc)
+            results[-1]["status"] = status
+            child_suites.append(dict(name=suite_name, status=status, report=str(path), summary=child_summary))
+            if status == "FAIL":
+                print("Stopping after failed suite:", suite_name, file=sys.stderr)
+                break
+    else:
+        record("live-regression-suite", "SKIP", "opt in with --live-suite", category="live-suite")
     summary = {s: sum(r["status"] == s for r in results) for s in ("PASS", "FAIL", "SKIP")}
-    report = dict(schema_version=1, timestamp_utc=dt.datetime.now(dt.timezone.utc).isoformat(), scope="STCP IETF validation; skipped live tests are not evidence of interoperability", host_kernel=os.uname().release if hasattr(os,"uname") else None, source_paths=dict(linux=str(linux) if linux else None, zephyr=str(z) if z else None), summary=summary, tests=results)
+    report = dict(schema_version=1, timestamp_utc=dt.datetime.now(dt.timezone.utc).isoformat(), scope="STCP IETF validation; skipped live tests are not evidence of interoperability", host_kernel=os.uname().release if hasattr(os,"uname") else None, source_paths=dict(linux=str(linux) if linux else None, zephyr=str(z) if z else None), summary=summary, tests=results, child_suites=child_suites)
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, indent=2, ensure_ascii=False)+"\n")
     print("SUMMARY", summary, "REPORT", args.report, flush=True)
