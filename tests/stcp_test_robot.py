@@ -115,7 +115,7 @@ def main():
             child_summary = None
             try:
                 child_summary = json.loads(path.read_text())["summary"]
-                if not all(isinstance(child_summary.get(k), int) for k in ("PASS", "FAIL", "SKIP")):
+                if not all(isinstance(child_summary.get(k, 0), int) and child_summary.get(k, 0) >= 0 for k in ("PASS", "FAIL", "SKIP")):
                     raise ValueError("invalid child summary")
                 if child_summary["FAIL"] or child_summary["PASS"] == 0:
                     status = "FAIL"
