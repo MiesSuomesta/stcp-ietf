@@ -46,7 +46,7 @@ done:
  if(fd>=0)close(fd);if(listener>=0)close(listener);free(buf);wake();return NULL;
 }
 int main(int argc,char**argv){
- if(argc<4){fprintf(stderr,"usage: %s PORT SIZE [SIZE ...]\n",argv[0]);return 2;}
+ if(argc<3){fprintf(stderr,"usage: %s PORT SIZE [SIZE ...]\n",argv[0]);return 2;}
  char *end;long p=strtol(argv[1],&end,10);if(*end||p<1024||p>65535)return 2;port=(int)p;
  nmsgs=argc-2;sizes=calloc((size_t)nmsgs,sizeof(*sizes));if(!sizes)return 1;
  for(int m=0;m<nmsgs;m++){unsigned long n=strtoul(argv[m+2],&end,10);if(*end||n<1||n>MAX_LEN)return 2;sizes[m]=(size_t)n;}
