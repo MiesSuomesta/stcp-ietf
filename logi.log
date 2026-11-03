@@ -1,0 +1,81 @@
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp2s0           UP             192.168.1.105/16 fe80::e2cb:4eff:feb4:8f7d/64 
+docker0          DOWN           172.17.0.1/16 
+br-948c4244d80c  DOWN           172.25.0.1/16 
+br-9f5650ec4ff0  UP             10.250.10.1/24 fe80::9858:83ff:fe9a:65fc/64 
+br-a358d325e7e0  DOWN           172.24.0.1/16 
+br-bcee2386c708  DOWN           172.27.0.1/16 
+br-c471028dd61a  UP             10.250.11.1/24 fe80::6830:b0ff:fe36:d52f/64 
+br-fb7ebb9a51fd  DOWN           172.19.0.1/16 
+br-3eda2a8560a5  DOWN           172.23.0.1/16 
+br-b6d6c078f272  DOWN           172.20.0.1/16 
+br-bec1b3428068  DOWN           172.29.0.1/16 
+br-e05943aa862a  DOWN           172.28.0.1/16 
+br-0886d1cb0a5c  UP             172.18.0.1/16 fe80::b0a0:36ff:fefc:f770/64 
+br-38c4fa26a9bf  UP             172.21.0.1/16 fe80::fc95:64ff:fe6f:36ba/64 
+br-3ec6a43895b5  DOWN           172.26.0.1/16 
+br-e316ba458490  UP             172.22.0.1/16 fe80::90a6:65ff:feba:312b/64 
+veth29129f1@if2  UP             fe80::e071:bff:fe96:4b84/64 
+veth39abf55@if2  UP             fe80::c8fc:eaff:fef2:8454/64 
+vethd7099be@if2  UP             fe80::f3:9bff:fe58:c6a/64 
+vethaf06a3e@if2  UP             fe80::bcd0:74ff:fe4f:a2e8/64 
+veth757fcd1@if2  UP             fe80::cc37:77ff:fe31:8432/64 
+veth9e5ec7b@if2  UP             fe80::9889:d4ff:fe72:a293/64 
+veth99ef77b@if3  UP             fe80::2017:97ff:fec8:23a8/64 
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enp2s0           UP             e0:cb:4e:b4:8f:7d <BROADCAST,MULTICAST,UP,LOWER_UP> 
+docker0          DOWN           32:a3:fd:fd:97:8a <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-948c4244d80c  DOWN           be:64:d7:ae:5f:85 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-9f5650ec4ff0  UP             9a:58:83:9a:65:fc <BROADCAST,MULTICAST,UP,LOWER_UP> 
+br-a358d325e7e0  DOWN           7e:76:98:7b:35:66 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-bcee2386c708  DOWN           be:40:04:34:2c:c0 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-c471028dd61a  UP             6a:30:b0:36:d5:2f <BROADCAST,MULTICAST,UP,LOWER_UP> 
+br-fb7ebb9a51fd  DOWN           4e:da:b7:b3:91:43 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-3eda2a8560a5  DOWN           7a:5d:20:0b:cc:b2 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-b6d6c078f272  DOWN           b6:66:87:8c:be:ff <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-bec1b3428068  DOWN           56:df:2d:93:a6:1d <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-e05943aa862a  DOWN           2a:83:fa:5f:ca:e4 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-0886d1cb0a5c  UP             b2:a0:36:fc:f7:70 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+br-38c4fa26a9bf  UP             fe:95:64:6f:36:ba <BROADCAST,MULTICAST,UP,LOWER_UP> 
+br-3ec6a43895b5  DOWN           56:06:da:bf:3a:9e <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+br-e316ba458490  UP             92:a6:65:ba:31:2b <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth29129f1@if2  UP             e2:71:0b:96:4b:84 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth39abf55@if2  UP             ca:fc:ea:f2:84:54 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+vethd7099be@if2  UP             02:f3:9b:58:0c:6a <BROADCAST,MULTICAST,UP,LOWER_UP> 
+vethaf06a3e@if2  UP             be:d0:74:4f:a2:e8 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth757fcd1@if2  UP             ce:37:77:31:84:32 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth9e5ec7b@if2  UP             9a:89:d4:72:a2:93 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+veth99ef77b@if3  UP             22:17:97:c8:23:a8 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+total 0
+lrwxrwxrwx 1 root root 13 Nov  3 02:30 usb-SEGGER_J-Link_001052043013-if00 -> ../../ttyACM0
+lrwxrwxrwx 1 root root 13 Nov  3 02:30 usb-SEGGER_J-Link_001052043013-if02 -> ../../ttyACM1
+[62349.511312] audit: type=1400 audit(1793665904.838:22202): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/proc/driver/nvidia/params" pid=39855 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[62349.511450] audit: type=1400 audit(1793665904.838:22203): apparmor="ALLOWED" operation="unlink" class="file" profile="Xorg" name="/dev/char/195:254" pid=39855 comm="Xorg" requested_mask="d" denied_mask="d" fsuid=0 ouid=0
+[62349.511520] audit: type=1400 audit(1793665904.838:22204): apparmor="ALLOWED" operation="symlink" class="file" profile="Xorg" name="/dev/char/195:254" pid=39855 comm="Xorg" requested_mask="c" denied_mask="c" fsuid=0 ouid=0
+[62349.511597] audit: type=1400 audit(1793665904.838:22205): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/dev/nvidia-modeset" pid=39855 comm="Xorg" requested_mask="wr" denied_mask="wr" fsuid=0 ouid=0
+[62355.482409] br-9f5650ec4ff0: port 1(veth31b5f54) entered blocking state
+[62355.482454] br-9f5650ec4ff0: port 1(veth31b5f54) entered disabled state
+[62355.482503] veth31b5f54: entered allmulticast mode
+[62355.483022] veth31b5f54: entered promiscuous mode
+[62355.632335] eth0: renamed from vethfe40a07
+[62355.635697] br-9f5650ec4ff0: port 1(veth31b5f54) entered blocking state
+[62355.635740] br-9f5650ec4ff0: port 1(veth31b5f54) entered forwarding state
+[62355.781121] br-c471028dd61a: port 3(vetha58d9fd) entered blocking state
+[62355.781168] br-c471028dd61a: port 3(vetha58d9fd) entered disabled state
+[62355.781207] vetha58d9fd: entered allmulticast mode
+[62355.781720] vetha58d9fd: entered promiscuous mode
+[62355.868446] eth1: renamed from veth88b4ff5
+[62355.870794] br-c471028dd61a: port 3(vetha58d9fd) entered blocking state
+[62355.870836] br-c471028dd61a: port 3(vetha58d9fd) entered forwarding state
+[62357.485669] br-9f5650ec4ff0: port 1(veth31b5f54) entered disabled state
+[62357.485962] vethfe40a07: renamed from eth0
+[62357.608538] br-9f5650ec4ff0: port 1(veth31b5f54) entered disabled state
+[62357.612086] veth31b5f54 (unregistering): left allmulticast mode
+[62357.612108] veth31b5f54 (unregistering): left promiscuous mode
+[62357.612163] br-9f5650ec4ff0: port 1(veth31b5f54) entered disabled state
+[62357.677077] br-c471028dd61a: port 3(vetha58d9fd) entered disabled state
+[62357.677379] veth88b4ff5: renamed from eth1
+[62357.776719] br-c471028dd61a: port 3(vetha58d9fd) entered disabled state
+[62357.779500] vetha58d9fd (unregistering): left allmulticast mode
+[62357.779519] vetha58d9fd (unregistering): left promiscuous mode
+[62357.779555] br-c471028dd61a: port 3(vetha58d9fd) entered disabled state

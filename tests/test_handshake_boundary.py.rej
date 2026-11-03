@@ -1,0 +1,15 @@
+--- tests/test_handshake_boundary.py
++++ tests/test_handshake_boundary.py
+@@ -43,8 +43,10 @@
+         z = zephyr.split("fn process_handshake_frames(", 1)[1].split("pub fn accept(", 1)[0]
+         self.assertIn("let have_handshake_inputs", l)
+         self.assertLess(l.index("if have_handshake_inputs {"), l.index("extract_next_wire_frame(ctx,queue)"))
+-        self.assertNotIn("have_handshake_inputs", z)
+-        self.assertIn("loop { let Some(frame)=extract_next_wire_frame(ctx,queue)?", z)
++        self.assertIn("let have_handshake_inputs", z)
++        self.assertIn("received_done || inner.peer_handshake_done", z)
++        self.assertIn("received_key.is_some() || inner.crypto.ready()", z)
++        self.assertLess(z.index("if have_handshake_inputs {"), z.index("extract_next_wire_frame(ctx,queue)"))
+         for parser in (l, z):
+             self.assertIn("inner.crypto.ready() && inner.peer_handshake_done", parser)
+ 
