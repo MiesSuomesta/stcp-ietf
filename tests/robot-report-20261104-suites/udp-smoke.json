@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:35:23.661428+00:00",
+  "scope": "experimental AF_STCP protocol 254 UDP bind/listen/accept and bidirectional 32-byte smoke test",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "parameters": {
+    "port": 19814,
+    "repeat": 1,
+    "timeout": 60
+  },
+  "summary": {
+    "PASS": 2,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "tests": [
+    {
+      "name": "udp-probe-build",
+      "status": "PASS",
+      "details": "/srv/stcp-project/ietf/tests/stcp_udp_probe.c: In function \u2018server\u2019:\n/srv/stcp-project/ietf/tests/stcp_udp_probe.c:45:5: warning: this \u2018if\u2019 clause does not guard... [-Wmisleading-indentation]\n   45 |     if(peer>=0)close(peer);if(listener>=0)close(listener);signal_ready();return NULL;\n      |     ^~\n/srv/stcp-project/ietf/tests/stcp_udp_probe.c:45:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the \u2018if\u2019\n   45 |     if(peer>=0)close(peer);if(listener>=0)close(listener);signal_ready();return NULL;\n      |                            ^~\n"
+    },
+    {
+      "name": "udp-probe-001",
+      "status": "PASS",
+      "seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP loopback, 32-byte datagram each direction\n"
+    }
+  ],
+  "limitations": [
+    "The chosen UDP socket API may be unsupported even when other UDP paths work.",
+    "No Zephyr hardware, UDP retransmission, fragmentation or loss injection tested."
+  ]
+}

@@ -1,0 +1,2720 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:34:17.883517+00:00",
+  "scope": "real Linux AF_STCP TCP bidirectional loopback only; no Zephyr, UDP or crafted frames",
+  "kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "parameters": {
+    "sequential": 200,
+    "parallel": 10,
+    "waves": 10,
+    "base_port": 19800,
+    "timeout": 60,
+    "report": "tests/robot-report-20261104-suites/tcp-stress.json"
+  },
+  "summary": {
+    "PASS": 300,
+    "FAIL": 0
+  },
+  "tests": [
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1139,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 1
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1107,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 2
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 3
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1119,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 4
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 5
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1081,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 6
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1089,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 7
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1192,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 8
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1103,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 9
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1158,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 10
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1123,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 11
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 12
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1106,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 13
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.3164,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 14
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1106,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 15
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1097,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 16
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1128,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 17
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1107,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 18
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1136,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 19
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1098,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 20
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1116,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 21
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1175,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 22
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1143,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 23
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 24
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 25
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.11,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 26
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 27
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1197,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 28
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 29
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 30
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1109,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 31
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1123,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 32
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1148,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 33
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1115,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 34
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.111,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 35
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1165,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 36
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1115,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 37
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 38
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 39
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 40
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1097,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 41
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1113,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 42
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1165,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 43
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1132,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 44
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1169,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 45
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1139,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 46
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1143,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 47
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1154,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 48
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 49
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1128,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 50
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1097,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 51
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1141,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 52
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1155,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 53
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1103,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 54
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 55
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1123,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 56
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1108,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 57
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1106,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 58
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.108,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 59
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 60
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1095,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 61
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 62
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1121,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 63
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 64
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1192,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 65
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1137,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 66
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1126,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 67
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 68
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 69
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1232,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 70
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1194,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 71
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1146,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 72
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1155,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 73
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1225,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 74
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.119,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 75
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1301,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 76
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1234,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 77
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1206,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 78
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1202,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 79
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1153,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 80
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.12,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 81
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1173,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 82
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1145,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 83
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.117,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 84
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1126,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 85
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1174,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 86
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1177,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 87
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 88
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1123,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 89
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.109,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 90
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 91
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1146,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 92
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 93
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1143,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 94
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1113,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 95
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 96
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1129,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 97
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.111,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 98
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1134,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 99
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1094,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 100
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1137,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 101
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1115,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 102
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1106,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 103
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 104
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1129,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 105
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1111,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 106
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1115,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 107
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1088,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 108
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1179,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 109
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 110
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1093,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 111
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1142,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 112
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1148,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 113
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1144,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 114
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1144,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 115
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1178,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 116
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1173,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 117
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1146,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 118
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1081,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 119
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1105,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 120
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 121
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1091,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 122
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1132,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 123
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 124
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1134,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 125
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1153,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 126
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1149,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 127
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 128
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1145,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 129
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1184,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 130
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1167,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 131
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.119,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 132
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 133
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1093,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 134
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1141,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 135
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1094,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 136
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 137
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 138
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.11,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 139
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1129,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 140
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 141
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1129,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 142
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 143
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 144
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1117,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 145
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1103,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 146
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1119,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 147
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1159,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 148
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1135,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 149
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1099,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 150
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1084,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 151
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1132,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 152
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1186,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 153
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1202,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 154
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1145,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 155
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 156
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1092,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 157
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1121,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 158
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1167,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 159
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1142,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 160
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1092,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 161
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1159,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 162
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1115,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 163
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1136,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 164
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 165
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1111,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 166
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1183,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 167
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1145,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 168
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1139,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 169
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1124,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 170
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1177,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 171
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1143,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 172
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.117,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 173
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1105,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 174
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1084,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 175
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 176
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1097,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 177
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 178
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1159,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 179
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1152,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 180
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1135,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 181
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1103,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 182
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 183
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1141,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 184
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1114,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 185
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.11,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 186
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1126,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 187
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1158,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 188
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 189
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 190
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1098,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 191
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 192
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.113,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 193
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1148,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 194
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 195
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.112,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 196
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1088,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 197
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1149,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 198
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1124,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 199
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1113,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "sequential",
+      "iteration": 200
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1176,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1213,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.13,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.12,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1152,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.117,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1294,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1263,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1126,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1166,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 1
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1252,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1343,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1285,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1185,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.124,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.122,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1242,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1246,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1166,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 2
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1315,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1195,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1293,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1259,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1369,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.11,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1362,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1308,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1361,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1183,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 3
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1133,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1336,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1134,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1166,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1318,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1312,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1211,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1196,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.119,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1216,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 4
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1191,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1192,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1202,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1256,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1303,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1266,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1298,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1309,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.124,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.13,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 5
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1305,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1295,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1192,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1168,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1319,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1278,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1127,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1206,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1161,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 6
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1216,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1325,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1125,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1321,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1177,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1298,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1352,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1285,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1209,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1343,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 7
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.132,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1356,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1107,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1206,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1204,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1243,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.12,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1407,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1383,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1313,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 8
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1323,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.132,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.125,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.118,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1217,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.13,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1136,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1331,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1181,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1313,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 9
+    },
+    {
+      "port": 19800,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1316,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19801,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1314,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19802,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1321,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19803,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1131,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19804,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1274,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19805,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1297,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19806,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1252,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19807,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1258,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19808,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1335,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    },
+    {
+      "port": 19809,
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1099,
+      "output": "PASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n",
+      "group": "parallel",
+      "wave": 10
+    }
+  ]
+}

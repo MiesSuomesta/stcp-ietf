@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:35:23.220227+00:00",
+  "scope": "real Linux AF_STCP TCP fresh-socket lifecycle with sequential connections, reply integrity and close",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "parameters": {
+    "connections": 100,
+    "repeat": 5,
+    "port": 19813,
+    "timeout": 120
+  },
+  "summary": {
+    "PASS": 5,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "successful_connections": 500,
+  "tests": [
+    {
+      "name": "linux-tcp-lifecycle-001",
+      "category": "live",
+      "status": "PASS",
+      "connections": 100,
+      "duration_seconds": 10.804,
+      "details": "exit=0\nPASS: 100 sequential connections with fresh sockets, bidirectional data and close\nLIMITATION: no forced disconnect, peer EOF assertion, UDP, Zephyr or malformed-wire injection.\n"
+    },
+    {
+      "name": "linux-tcp-lifecycle-002",
+      "category": "live",
+      "status": "PASS",
+      "connections": 100,
+      "duration_seconds": 11.001,
+      "details": "exit=0\nPASS: 100 sequential connections with fresh sockets, bidirectional data and close\nLIMITATION: no forced disconnect, peer EOF assertion, UDP, Zephyr or malformed-wire injection.\n"
+    },
+    {
+      "name": "linux-tcp-lifecycle-003",
+      "category": "live",
+      "status": "PASS",
+      "connections": 100,
+      "duration_seconds": 11.122,
+      "details": "exit=0\nPASS: 100 sequential connections with fresh sockets, bidirectional data and close\nLIMITATION: no forced disconnect, peer EOF assertion, UDP, Zephyr or malformed-wire injection.\n"
+    },
+    {
+      "name": "linux-tcp-lifecycle-004",
+      "category": "live",
+      "status": "PASS",
+      "connections": 100,
+      "duration_seconds": 10.83,
+      "details": "exit=0\nPASS: 100 sequential connections with fresh sockets, bidirectional data and close\nLIMITATION: no forced disconnect, peer EOF assertion, UDP, Zephyr or malformed-wire injection.\n"
+    },
+    {
+      "name": "linux-tcp-lifecycle-005",
+      "category": "live",
+      "status": "PASS",
+      "connections": 100,
+      "duration_seconds": 10.861,
+      "details": "exit=0\nPASS: 100 sequential connections with fresh sockets, bidirectional data and close\nLIMITATION: no forced disconnect, peer EOF assertion, UDP, Zephyr or malformed-wire injection.\n"
+    }
+  ],
+  "limitations": [
+    "No forced network failure or EOF verification",
+    "No UDP, Zephyr, crafted handshake or fuzzing",
+    "A timeout may indicate a hang; inspect kernel logs and process state"
+  ]
+}

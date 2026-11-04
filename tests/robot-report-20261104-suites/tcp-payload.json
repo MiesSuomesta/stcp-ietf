@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:34:28.160397+00:00",
+  "scope": "real Linux AF_STCP TCP immediate-DATA and bidirectional payload integrity only",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "parameters": {
+    "sizes": [
+      1,
+      16,
+      17,
+      18,
+      40,
+      64,
+      255,
+      256,
+      257,
+      1024,
+      1400,
+      1500,
+      3000,
+      4096,
+      12000,
+      16384,
+      65536
+    ],
+    "repeat": 5,
+    "port": 19812,
+    "timeout": 60
+  },
+  "summary": {
+    "PASS": 85,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "tests": [
+    {
+      "name": "linux-tcp-immediate-data-1B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1,
+      "iteration": 1,
+      "duration_seconds": 0.1158,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1,
+      "iteration": 2,
+      "duration_seconds": 0.1177,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1,
+      "iteration": 3,
+      "duration_seconds": 0.1197,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1,
+      "iteration": 4,
+      "duration_seconds": 0.1148,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1,
+      "iteration": 5,
+      "duration_seconds": 0.1139,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16,
+      "iteration": 1,
+      "duration_seconds": 0.1256,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16,
+      "iteration": 2,
+      "duration_seconds": 0.1204,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16,
+      "iteration": 3,
+      "duration_seconds": 0.1182,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16,
+      "iteration": 4,
+      "duration_seconds": 0.126,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16,
+      "iteration": 5,
+      "duration_seconds": 0.1165,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-17B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 17,
+      "iteration": 1,
+      "duration_seconds": 0.116,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=17\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-17B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 17,
+      "iteration": 2,
+      "duration_seconds": 0.1146,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=17\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-17B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 17,
+      "iteration": 3,
+      "duration_seconds": 0.12,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=17\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-17B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 17,
+      "iteration": 4,
+      "duration_seconds": 0.1122,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=17\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-17B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 17,
+      "iteration": 5,
+      "duration_seconds": 0.1136,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=17\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-18B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 18,
+      "iteration": 1,
+      "duration_seconds": 0.1112,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=18\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-18B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 18,
+      "iteration": 2,
+      "duration_seconds": 0.1107,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=18\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-18B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 18,
+      "iteration": 3,
+      "duration_seconds": 0.1118,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=18\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-18B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 18,
+      "iteration": 4,
+      "duration_seconds": 0.1174,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=18\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-18B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 18,
+      "iteration": 5,
+      "duration_seconds": 0.1128,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=18\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-40B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 40,
+      "iteration": 1,
+      "duration_seconds": 0.1114,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=40\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-40B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 40,
+      "iteration": 2,
+      "duration_seconds": 0.113,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=40\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-40B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 40,
+      "iteration": 3,
+      "duration_seconds": 0.1177,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=40\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-40B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 40,
+      "iteration": 4,
+      "duration_seconds": 0.1179,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=40\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-40B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 40,
+      "iteration": 5,
+      "duration_seconds": 0.1123,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=40\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-64B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 64,
+      "iteration": 1,
+      "duration_seconds": 0.1104,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=64\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-64B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 64,
+      "iteration": 2,
+      "duration_seconds": 0.1172,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=64\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-64B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 64,
+      "iteration": 3,
+      "duration_seconds": 0.1156,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=64\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-64B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 64,
+      "iteration": 4,
+      "duration_seconds": 0.1132,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=64\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-64B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 64,
+      "iteration": 5,
+      "duration_seconds": 0.1113,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=64\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-255B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 255,
+      "iteration": 1,
+      "duration_seconds": 0.1136,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=255\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-255B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 255,
+      "iteration": 2,
+      "duration_seconds": 0.1126,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=255\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-255B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 255,
+      "iteration": 3,
+      "duration_seconds": 0.1153,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=255\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-255B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 255,
+      "iteration": 4,
+      "duration_seconds": 0.1161,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=255\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-255B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 255,
+      "iteration": 5,
+      "duration_seconds": 0.1135,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=255\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-256B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 256,
+      "iteration": 1,
+      "duration_seconds": 0.1114,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=256\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-256B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 256,
+      "iteration": 2,
+      "duration_seconds": 0.1127,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=256\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-256B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 256,
+      "iteration": 3,
+      "duration_seconds": 0.1098,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=256\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-256B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 256,
+      "iteration": 4,
+      "duration_seconds": 0.1082,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=256\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-256B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 256,
+      "iteration": 5,
+      "duration_seconds": 0.1157,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=256\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-257B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 257,
+      "iteration": 1,
+      "duration_seconds": 0.1179,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=257\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-257B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 257,
+      "iteration": 2,
+      "duration_seconds": 0.1115,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=257\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-257B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 257,
+      "iteration": 3,
+      "duration_seconds": 0.1103,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=257\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-257B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 257,
+      "iteration": 4,
+      "duration_seconds": 0.1112,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=257\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-257B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 257,
+      "iteration": 5,
+      "duration_seconds": 0.113,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=257\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1024B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1024,
+      "iteration": 1,
+      "duration_seconds": 0.1113,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1024\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1024B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1024,
+      "iteration": 2,
+      "duration_seconds": 0.1094,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1024\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1024B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1024,
+      "iteration": 3,
+      "duration_seconds": 0.1153,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1024\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1024B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1024,
+      "iteration": 4,
+      "duration_seconds": 0.1137,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1024\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1024B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1024,
+      "iteration": 5,
+      "duration_seconds": 0.1107,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1024\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1400B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1400,
+      "iteration": 1,
+      "duration_seconds": 0.1159,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1400\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1400B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1400,
+      "iteration": 2,
+      "duration_seconds": 0.113,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1400\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1400B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1400,
+      "iteration": 3,
+      "duration_seconds": 0.1168,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1400\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1400B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1400,
+      "iteration": 4,
+      "duration_seconds": 0.1161,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1400\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1400B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1400,
+      "iteration": 5,
+      "duration_seconds": 0.1115,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1400\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1500B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1500,
+      "iteration": 1,
+      "duration_seconds": 0.1165,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1500\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1500B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1500,
+      "iteration": 2,
+      "duration_seconds": 0.1115,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1500\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1500B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1500,
+      "iteration": 3,
+      "duration_seconds": 0.1159,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1500\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1500B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1500,
+      "iteration": 4,
+      "duration_seconds": 0.1241,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1500\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-1500B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 1500,
+      "iteration": 5,
+      "duration_seconds": 0.1192,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=1500\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-3000B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 3000,
+      "iteration": 1,
+      "duration_seconds": 0.1235,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=3000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-3000B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 3000,
+      "iteration": 2,
+      "duration_seconds": 0.1263,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=3000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-3000B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 3000,
+      "iteration": 3,
+      "duration_seconds": 0.1236,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=3000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-3000B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 3000,
+      "iteration": 4,
+      "duration_seconds": 0.1325,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=3000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-3000B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 3000,
+      "iteration": 5,
+      "duration_seconds": 0.1238,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=3000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-4096B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 4096,
+      "iteration": 1,
+      "duration_seconds": 0.1219,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=4096\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-4096B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 4096,
+      "iteration": 2,
+      "duration_seconds": 0.1181,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=4096\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-4096B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 4096,
+      "iteration": 3,
+      "duration_seconds": 0.1135,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=4096\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-4096B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 4096,
+      "iteration": 4,
+      "duration_seconds": 0.1123,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=4096\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-4096B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 4096,
+      "iteration": 5,
+      "duration_seconds": 0.1166,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=4096\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-12000B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 12000,
+      "iteration": 1,
+      "duration_seconds": 0.1133,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=12000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-12000B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 12000,
+      "iteration": 2,
+      "duration_seconds": 0.1124,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=12000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-12000B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 12000,
+      "iteration": 3,
+      "duration_seconds": 0.1178,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=12000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-12000B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 12000,
+      "iteration": 4,
+      "duration_seconds": 0.1158,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=12000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-12000B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 12000,
+      "iteration": 5,
+      "duration_seconds": 0.114,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=12000\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16384B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16384,
+      "iteration": 1,
+      "duration_seconds": 0.112,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16384\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16384B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16384,
+      "iteration": 2,
+      "duration_seconds": 0.1129,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16384\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16384B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16384,
+      "iteration": 3,
+      "duration_seconds": 0.1109,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16384\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16384B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16384,
+      "iteration": 4,
+      "duration_seconds": 0.1202,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16384\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-16384B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 16384,
+      "iteration": 5,
+      "duration_seconds": 0.1198,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=16384\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-65536B-001",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 65536,
+      "iteration": 1,
+      "duration_seconds": 0.124,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=65536\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-65536B-002",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 65536,
+      "iteration": 2,
+      "duration_seconds": 0.13,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=65536\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-65536B-003",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 65536,
+      "iteration": 3,
+      "duration_seconds": 0.1306,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=65536\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-65536B-004",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 65536,
+      "iteration": 4,
+      "duration_seconds": 0.1274,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=65536\n"
+    },
+    {
+      "name": "linux-tcp-immediate-data-65536B-005",
+      "category": "live",
+      "status": "PASS",
+      "size_bytes": 65536,
+      "iteration": 5,
+      "duration_seconds": 0.1267,
+      "details": "PASS AF_STCP TCP immediate DATA and bidirectional integrity size=65536\n"
+    }
+  ],
+  "limitations": [
+    "No Zephyr or UDP test",
+    "No crafted wire-level handshake injection",
+    "Sizes are application payload lengths, not wire frame lengths"
+  ]
+}

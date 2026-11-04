@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:35:25.445278+00:00",
+  "scope": "STCP IETF validation; skipped live tests are not evidence of interoperability",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "source_paths": {
+    "linux": "/srv/stcp-project/STCP",
+    "zephyr": "/srv/stcp-project/SDK/Zephyr/common/module/rust/src/session.rs"
+  },
+  "summary": {
+    "PASS": 113,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "tests": [
+    {
+      "name": "crypto-vectors",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.188,
+      "details": "exit=0\ntest_ack_frame (test_stcp_vectors.STCPVectorTests.test_ack_frame) ... ok\ntest_aead_tampering_rejected (test_stcp_vectors.STCPVectorTests.test_aead_tampering_rejected) ... ok\ntest_data_frame (test_stcp_vectors.STCPVectorTests.test_data_frame) ... ok\ntest_header_flags_and_endianness (test_stcp_vectors.STCPVectorTests.test_header_flags_and_endianness) ... ok\ntest_x25519_and_kdf (test_stcp_vectors.STCPVectorTests.test_x25519_and_kdf) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.011s\n\nOK\n"
+    },
+    {
+      "name": "zephyr-interop-adapter-contract",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 1.749,
+      "details": "exit=0\ntest_rejects_boolean_byte_count (test_zephyr_interop_contract.InteropContractTests.test_rejects_boolean_byte_count) ... ok\ntest_rejects_empty_device_id (test_zephyr_interop_contract.InteropContractTests.test_rejects_empty_device_id) ... ok\ntest_rejects_false_data_verification (test_zephyr_interop_contract.InteropContractTests.test_rejects_false_data_verification) ... ok\ntest_rejects_false_handshake (test_zephyr_interop_contract.InteropContractTests.test_rejects_false_handshake) ... ok\ntest_rejects_missing_required_field (test_zephyr_interop_contract.InteropContractTests.test_rejects_missing_required_field) ... ok\ntest_rejects_runner_failure (test_zephyr_interop_contract.InteropContractTests.test_rejects_runner_failure) ... ok\ntest_rejects_transport_mismatch (test_zephyr_interop_contract.InteropContractTests.test_rejects_transport_mismatch) ... ok\ntest_rejects_zero_bytes (test_zephyr_interop_contract.InteropContractTests.test_rejects_zero_bytes) ... ok\ntest_synthetic_valid_contract (test_zephyr_interop_contract.InteropContractTests.test_synthetic_valid_contract) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 1.600s\n\nOK\n"
+    },
+    {
+      "name": "rfcxml-parse",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0,
+      "details": "RFCXML v3 parsed"
+    },
+    {
+      "name": "rfcxml-text",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 2.873,
+      "details": "exit=0\n Created file /tmp/stcp-rfc-_ehlm08b/draft.txt\n"
+    },
+    {
+      "name": "rfcxml-html",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 1.279,
+      "details": "exit=0\n Created file /tmp/stcp-rfc-_ehlm08b/draft.html\n"
+    },
+    {
+      "name": "linux-source-contract",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.204,
+      "details": "exit=0\ntest_frame_constants (test_stcp_source_contract.SourceContractTests.test_frame_constants) ... ok\ntest_kdf_domain_and_labels (test_stcp_source_contract.SourceContractTests.test_kdf_domain_and_labels) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "name": "handshake-source-and-model",
+      "status": "PASS",
+      "category": "offline",
+      "duration_seconds": 0.158,
+      "details": "exit=0\ntest_actual_source_contract (__main__.Tests.test_actual_source_contract) ... ok\ntest_completed_handshake (__main__.Tests.test_completed_handshake) ... ok\ntest_done_key_data (__main__.Tests.test_done_key_data) ... ok\ntest_early_data (__main__.Tests.test_early_data) ... ok\ntest_key_done_data (__main__.Tests.test_key_done_data) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "name": "linux-live-build",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.666,
+      "details": "exit=0\n"
+    },
+    {
+      "name": "linux-af-stcp-live-001",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.111,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-002",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-003",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-004",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.111,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-005",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-006",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-007",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-008",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-009",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.124,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-010",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-011",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.124,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-012",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.125,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-013",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.123,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-014",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.121,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-015",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.122,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-016",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.127,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-017",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.123,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-018",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.126,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-019",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.131,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-020",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.124,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-021",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.129,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-022",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.122,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-023",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.144,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-024",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.133,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-025",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-026",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.127,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-027",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.131,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-028",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.127,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-029",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.126,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-030",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.136,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-031",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.12,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-032",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.127,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-033",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.127,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-034",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.134,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-035",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.126,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-036",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.124,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-037",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.124,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-038",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.123,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-039",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.119,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-040",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-041",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.118,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-042",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-043",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.123,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-044",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-045",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-046",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-047",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-048",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-049",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-050",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-051",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.111,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-052",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-053",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-054",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-055",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.122,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-056",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-057",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-058",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-059",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-060",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-061",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-062",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.319,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-063",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.111,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-064",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-065",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.108,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-066",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-067",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-068",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-069",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.118,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-070",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-071",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-072",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-073",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-074",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-075",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-076",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-077",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-078",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-079",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-080",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-081",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-082",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.112,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-083",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-084",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-085",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-086",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-087",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-088",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-089",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-090",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.114,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-091",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.116,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-092",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.111,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-093",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.113,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-094",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-095",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-096",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.108,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-097",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-098",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.115,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-099",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.117,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "linux-af-stcp-live-100",
+      "status": "PASS",
+      "category": "live",
+      "duration_seconds": 0.11,
+      "details": "exit=0\nPASS: AF_STCP TCP loopback, client->server=1024 bytes, server->client=257 bytes\nLIMITATION: no wire capture, crypto known-answer comparison, or Zephyr interoperability.\n"
+    },
+    {
+      "name": "zephyr-external-live",
+      "status": "SKIP",
+      "category": "external-live",
+      "duration_seconds": 0,
+      "details": "no real Zephyr test command supplied; no hardware run claimed"
+    },
+    {
+      "name": "suite-tcp-stress",
+      "status": "PASS",
+      "category": "live-suite",
+      "duration_seconds": 24.786,
+      "details": "exit=0\n[PASS] build\n[PASS] sequential 25/200\n[PASS] sequential 50/200\n[PASS] sequential 75/200\n[PASS] sequential 100/200\n[PASS] sequential 125/200\n[PASS] sequential 150/200\n[PASS] sequential 175/200\n[PASS] sequential 200/200\n[PASS] parallel wave 1/10, clients=10, failed=0\n[PASS] parallel wave 2/10, clients=10, failed=0\n[PASS] parallel wave 3/10, clients=10, failed=0\n[PASS] parallel wave 4/10, clients=10, failed=0\n[PASS] parallel wave 5/10, clients=10, failed=0\n[PASS] parallel wave 6/10, clients=10, failed=0\n[PASS] parallel wave 7/10, clients=10, failed=0\n[PASS] parallel wave 8/10, clients=10, failed=0\n[PASS] parallel wave 9/10, clients=10, failed=0\n[PASS] parallel wave 10/10, clients=10, failed=0\nSUMMARY {'PASS': 300, 'FAIL': 0} REPORT tests/robot-report-20261104-suites/tcp-stress.json\n"
+    },
+    {
+      "name": "suite-tcp-payload",
+      "status": "PASS",
+      "category": "live-suite",
+      "duration_seconds": 10.27,
+      "details": "exit=0\n[PASS] payload harness build\n[PASS] size=1 bytes, repeats=5\n[PASS] size=16 bytes, repeats=5\n[PASS] size=17 bytes, repeats=5\n[PASS] size=18 bytes, repeats=5\n[PASS] size=40 bytes, repeats=5\n[PASS] size=64 bytes, repeats=5\n[PASS] size=255 bytes, repeats=5\n[PASS] size=256 bytes, repeats=5\n[PASS] size=257 bytes, repeats=5\n[PASS] size=1024 bytes, repeats=5\n[PASS] size=1400 bytes, repeats=5\n[PASS] size=1500 bytes, repeats=5\n[PASS] size=3000 bytes, repeats=5\n[PASS] size=4096 bytes, repeats=5\n[PASS] size=12000 bytes, repeats=5\n[PASS] size=16384 bytes, repeats=5\n[PASS] size=65536 bytes, repeats=5\nSUMMARY {'PASS': 85, 'FAIL': 0, 'SKIP': 0} REPORT tests/robot-report-20261104-suites/tcp-payload.json\n"
+    },
+    {
+      "name": "suite-tcp-lifecycle",
+      "status": "PASS",
+      "category": "live-suite",
+      "duration_seconds": 55.056,
+      "details": "exit=0\n[PASS] lifecycle harness build\n[PASS] lifecycle batch 1/5 (100 connections)\n[PASS] lifecycle batch 2/5 (100 connections)\n[PASS] lifecycle batch 3/5 (100 connections)\n[PASS] lifecycle batch 4/5 (100 connections)\n[PASS] lifecycle batch 5/5 (100 connections)\nSUMMARY {'PASS': 5, 'FAIL': 0, 'SKIP': 0} SUCCESSFUL_CONNECTIONS 500 REPORT tests/robot-report-20261104-suites/tcp-lifecycle.json\n"
+    },
+    {
+      "name": "suite-udp-smoke",
+      "status": "PASS",
+      "category": "live-suite",
+      "duration_seconds": 0.449,
+      "details": "exit=0\n[PASS] UDP probe 1/1: exit=0\nPASS AF_STCP UDP loopback, 32-byte datagram each direction\n\nSUMMARY {'PASS': 2, 'FAIL': 0, 'SKIP': 0} REPORT tests/robot-report-20261104-suites/udp-smoke.json\n"
+    },
+    {
+      "name": "suite-udp-matrix",
+      "status": "PASS",
+      "category": "live-suite",
+      "duration_seconds": 1.758,
+      "details": "exit=0\n[PASS] UDP message harness build\n[PASS] UDP sequential pass 1/3 cases=19\n[PASS] UDP sequential pass 2/3 cases=19\n[PASS] UDP sequential pass 3/3 cases=19\n[PASS] UDP parallel wave 1/3 clients=4\n[PASS] UDP parallel wave 2/3 clients=4\n[PASS] UDP parallel wave 3/3 clients=4\nSUMMARY {'PASS': 69, 'FAIL': 0, 'SKIP': 0} VERIFIED_MESSAGES 357 REPORT tests/robot-report-20261104-suites/udp-matrix.json\n"
+    }
+  ],
+  "child_suites": [
+    {
+      "name": "tcp-stress",
+      "status": "PASS",
+      "report": "tests/robot-report-20261104-suites/tcp-stress.json",
+      "summary": {
+        "PASS": 300,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "tcp-payload",
+      "status": "PASS",
+      "report": "tests/robot-report-20261104-suites/tcp-payload.json",
+      "summary": {
+        "PASS": 85,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "name": "tcp-lifecycle",
+      "status": "PASS",
+      "report": "tests/robot-report-20261104-suites/tcp-lifecycle.json",
+      "summary": {
+        "PASS": 5,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "name": "udp-smoke",
+      "status": "PASS",
+      "report": "tests/robot-report-20261104-suites/udp-smoke.json",
+      "summary": {
+        "PASS": 2,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    },
+    {
+      "name": "udp-matrix",
+      "status": "PASS",
+      "report": "tests/robot-report-20261104-suites/udp-matrix.json",
+      "summary": {
+        "PASS": 69,
+        "FAIL": 0,
+        "SKIP": 0
+      }
+    }
+  ]
+}

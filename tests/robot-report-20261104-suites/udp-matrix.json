@@ -1,0 +1,1092 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-11-04T13:35:25.388115+00:00",
+  "scope": "real Linux AF_STCP UDP message-length and payload-integrity test, sequential fresh sockets and independent parallel socket pairs",
+  "host_kernel": "7.3.0-rc7-next-20261016-nyt-rokkaa",
+  "parameters": {
+    "sizes": [
+      1,
+      16,
+      17,
+      18,
+      40,
+      64,
+      255,
+      256,
+      257,
+      1024,
+      1400,
+      1500,
+      3000,
+      4096,
+      12000,
+      16384,
+      65536
+    ],
+    "repeat": 3,
+    "parallel": 4,
+    "waves": 3,
+    "base_port": 19800,
+    "timeout": 60
+  },
+  "summary": {
+    "PASS": 69,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "verified_messages": 357,
+  "tests": [
+    {
+      "name": "udp-sequential-001-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1
+      ],
+      "duration_seconds": 0.008,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        17
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        18
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-005",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        40
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-006",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        64
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-007",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        255
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-008",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        256
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-009",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        257
+      ],
+      "duration_seconds": 0.011,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-010",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1024
+      ],
+      "duration_seconds": 0.011,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-011",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1400
+      ],
+      "duration_seconds": 0.012,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-012",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1500
+      ],
+      "duration_seconds": 0.014,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-013",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        3000
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-014",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        4096
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-015",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        12000
+      ],
+      "duration_seconds": 0.018,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-016",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16384
+      ],
+      "duration_seconds": 0.024,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-017",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536
+      ],
+      "duration_seconds": 0.038,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-001-018",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.057,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-sequential-001-019",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536,
+        16384,
+        12000,
+        4096,
+        3000,
+        1500,
+        1400,
+        1024,
+        257,
+        256,
+        255,
+        64,
+        40,
+        18,
+        17,
+        16,
+        1
+      ],
+      "duration_seconds": 0.043,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-sequential-002-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1
+      ],
+      "duration_seconds": 0.019,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16
+      ],
+      "duration_seconds": 0.018,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        17
+      ],
+      "duration_seconds": 0.015,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        18
+      ],
+      "duration_seconds": 0.026,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-005",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        40
+      ],
+      "duration_seconds": 0.014,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-006",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        64
+      ],
+      "duration_seconds": 0.033,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-007",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        255
+      ],
+      "duration_seconds": 0.015,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-008",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        256
+      ],
+      "duration_seconds": 0.012,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-009",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        257
+      ],
+      "duration_seconds": 0.015,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-010",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1024
+      ],
+      "duration_seconds": 0.011,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-011",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1400
+      ],
+      "duration_seconds": 0.016,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-012",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1500
+      ],
+      "duration_seconds": 0.019,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-013",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        3000
+      ],
+      "duration_seconds": 0.012,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-014",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        4096
+      ],
+      "duration_seconds": 0.011,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-015",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        12000
+      ],
+      "duration_seconds": 0.015,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-016",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16384
+      ],
+      "duration_seconds": 0.014,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-017",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536
+      ],
+      "duration_seconds": 0.026,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-002-018",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.041,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-sequential-002-019",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536,
+        16384,
+        12000,
+        4096,
+        3000,
+        1500,
+        1400,
+        1024,
+        257,
+        256,
+        255,
+        64,
+        40,
+        18,
+        17,
+        16,
+        1
+      ],
+      "duration_seconds": 0.037,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-sequential-003-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        17
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        18
+      ],
+      "duration_seconds": 0.008,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-005",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        40
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-006",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        64
+      ],
+      "duration_seconds": 0.006,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-007",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        255
+      ],
+      "duration_seconds": 0.009,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-008",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        256
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-009",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        257
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-010",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1024
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-011",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1400
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-012",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1500
+      ],
+      "duration_seconds": 0.007,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-013",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        3000
+      ],
+      "duration_seconds": 0.006,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-014",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        4096
+      ],
+      "duration_seconds": 0.008,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-015",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        12000
+      ],
+      "duration_seconds": 0.01,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-016",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        16384
+      ],
+      "duration_seconds": 0.011,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-017",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536
+      ],
+      "duration_seconds": 0.02,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=1\n"
+    },
+    {
+      "name": "udp-sequential-003-018",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.048,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-sequential-003-019",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        65536,
+        16384,
+        12000,
+        4096,
+        3000,
+        1500,
+        1400,
+        1024,
+        257,
+        256,
+        255,
+        64,
+        40,
+        18,
+        17,
+        16,
+        1
+      ],
+      "duration_seconds": 0.055,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-001-client-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19801,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.049,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-001-client-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.069,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-001-client-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19802,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.055,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-001-client-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19803,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.087,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-002-client-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19801,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.062,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-002-client-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19802,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.078,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-002-client-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-002-client-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19803,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.109,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-003-client-001",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19800,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.089,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-003-client-003",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19802,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.102,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-003-client-004",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19803,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.154,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    },
+    {
+      "name": "udp-parallel-wave-003-client-002",
+      "category": "udp-live",
+      "status": "PASS",
+      "port": 19801,
+      "sizes": [
+        1,
+        16,
+        17,
+        18,
+        40,
+        64,
+        255,
+        256,
+        257,
+        1024,
+        1400,
+        1500,
+        3000,
+        4096,
+        12000,
+        16384,
+        65536
+      ],
+      "duration_seconds": 0.164,
+      "details": "exit=0\nPASS AF_STCP UDP message boundaries and integrity messages=17\n"
+    }
+  ],
+  "limitations": [
+    "One outstanding message at a time: no back-to-back datagram queue stress",
+    "Parallel tests use independent server ports, not a shared UDP listener",
+    "No packet loss, reordering, forced disconnect, Zephyr, or malformed-wire injection"
+  ]
+}
