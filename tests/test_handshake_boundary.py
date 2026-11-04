@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Source-contract and deterministic model tests; NOT live kernel/Zephyr execution."""
 import argparse
+import os
 from pathlib import Path
 import unittest
 
@@ -37,8 +38,12 @@ class Tests(unittest.TestCase):
         self.assertEqual(parse_model(seq, True)[0], "Protocol")
         self.assertEqual(parse_model(seq, False)[0], "Protocol")
     def test_actual_source_contract(self):
-        linux = Path(self.linux).read_text()
-        zephyr = Path(self.zephyr).read_text()
+        linux_path = os.environ.get("STCP_LINUX_SESSION")
+        zephyr_path = os.environ.get("STCP_ZEPHYR_SESSION")
+        if not linux_path or not zephyr_path:
+            self.skipTest("Set STCP_LINUX_SESSION and STCP_ZEPHYR_SESSION to inspect real sources")
+        linux = Path(linux_path).read_text(encoding="utf-8")
+        zephyr = Path(zephyr_path).read_text(encoding="utf-8")
         l = linux.split("fn process_handshake_frames_locked(", 1)[1].split("pub fn create_external_tcp_child(", 1)[0]
         z = zephyr.split("fn process_handshake_frames(", 1)[1].split("pub fn accept(", 1)[0]
         self.assertIn("let have_handshake_inputs", l)
@@ -52,8 +57,12 @@ class Tests(unittest.TestCase):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--linux", required=True)
-    p.add_argument("--zephyr", required=True)
+    p.add_argument("--linux", help="Linux kernel STCP session.rs")
+    p.add_argument("--zephyr", help="Zephyr STCP session.rs")
     args = p.parse_args()
-    Tests.linux, Tests.zephyr = args.linux, args.zephyr
+    if bool(args.linux) != bool(args.zephyr):
+        p.error("--linux and --zephyr must be provided together")
+    if args.linux:
+        os.environ["STCP_LINUX_SESSION"] = args.linux
+        os.environ["STCP_ZEPHYR_SESSION"] = args.zephyr
     unittest.main(argv=["test_handshake_boundary.py"], verbosity=2)
