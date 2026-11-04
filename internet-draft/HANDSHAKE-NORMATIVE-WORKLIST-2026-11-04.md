@@ -1,6 +1,6 @@
 # STCP handshake normative clarification worklist — 2026-11-04
 
-Status: **proposed normative decisions for review**, not yet adopted requirements. Source basis: `internet-draft/draft-paxsudos-stcp-00.xml`, `internet-draft/STCP-STATE-MACHINE-SOURCE-REVIEW-2026-11-02.md`, and `internet-draft/PUBLICATION-READINESS-REVIEW-2026-11-02.md`. Do not silently promote observed Linux implementation details to universal requirements.
+Status: **proposed normative decisions for review**, not yet adopted requirements. **Design decision confirmed 2026-11-04: the base STCP protocol does not and will not authenticate peer identity.** Source basis: `internet-draft/draft-paxsudos-stcp-00.xml`, `internet-draft/STCP-STATE-MACHINE-SOURCE-REVIEW-2026-11-02.md`, and `internet-draft/PUBLICATION-READINESS-REVIEW-2026-11-02.md`. Do not silently promote observed Linux implementation details to universal requirements.
 
 ## Existing documented wire behavior
 
@@ -18,7 +18,7 @@ The following is **candidate wording**, not a claim that all current implementat
 - **HS-2 — HandshakeDone length:** A receiver **MUST** reject a HandshakeDone frame with a nonempty payload.
 - **HS-3 — Readiness:** An endpoint **MUST NOT** deliver protected application DATA as established traffic until its traffic keys are available and it has processed the peer HandshakeDone.
 - **HS-4 — Stream framing:** An endpoint **MUST** handle a PublicKey or HandshakeDone split across multiple TCP reads, and **MUST NOT** interpret incomplete frames as complete messages.
-- **HS-5 — Security claim:** Implementations **MUST NOT** treat the unauthenticated base key exchange as proof of peer identity.
+- **HS-5 — Security claim:** Implementations **MUST NOT** treat the unauthenticated base key exchange as proof of peer identity. This is an intentional protocol boundary, not a pending feature. Applications needing identity authentication must provide it separately above STCP or through another explicitly specified mechanism outside the base protocol.
 
 ## Decisions blocked pending code and negative tests
 
@@ -33,7 +33,7 @@ The following is **candidate wording**, not a claim that all current implementat
 | Version mismatch / unknown frame type | Specify reject vs close vs reset | Negative vectors on TCP and UDP |
 | Connection-ID binding | Prevent cross-connection frame confusion | Source trace and multi-connection tests |
 | Reconnect / fresh keys / nonce rollover | GCM nonce uniqueness and key lifetime | End-to-end crypto and reconnect tests |
-| Peer authentication | Decide whether to add a mandatory mode or explicitly scope unauthenticated encryption | Threat model and protocol design decision |
+| Peer authentication | **RESOLVED: out of scope by design.** STCP does not authenticate peer identity and will not add a TLS-like identity/PKI layer. | State limitation and active MITM risk unambiguously in Security Considerations |
 
 ## Proposed state-transition specification outline
 
@@ -49,6 +49,6 @@ The following is **candidate wording**, not a claim that all current implementat
 2. Add deterministic handshake permutation and malformed-frame tests, with captures for both carriers where supported.
 3. Resolve the protocol decisions and only then move confirmed MUST/SHOULD/MAY language into `draft-paxsudos-stcp-00.xml`.
 4. Rerun RFCXML rendering and IETF robot validation; retain logs and report remaining SKIPs.
-5. Review peer authentication and UDP congestion safety separately as publication-critical open issues.
+5. Document the intentional absence of peer identity authentication and its active MITM consequences in Security Considerations; review UDP congestion safety separately as a publication-critical open issue.
 
 This document intentionally makes **no production code changes** and does not claim the protocol is ready for Standards Track publication.
