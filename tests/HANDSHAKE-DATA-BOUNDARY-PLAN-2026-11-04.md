@@ -84,3 +84,21 @@ SDK_ROBOT SUMMARY status=PASS passed=785 failed=0
 During the run, periodic diagnostics reported `STCP_HEAP stage=socket-start requested=0 used=0 free=32680 peak=1184` and `STCP_POOL frame=0/16 large=0/2 peak=4/1 failures=0 static_bytes=35464 tx_wait=0 rx_defer=0`. These snapshots show no outstanding tracked heap allocation or occupied pool buffers at those points, and no reported pool allocation failures; they do not establish absence of all possible memory leaks. The diagnostic lines were emitted at ERROR logging level in the flashed firmware; the developer subsequently changed relevant source logging calls to DEBUG, but that change was not part of this recorded firmware run.
 
 **Evidence classification:** developer-reported real-hardware regression PASS. It supports sequential STCP interoperability and lifecycle/stress behavior under the executed suite. It does **not** establish controlled HB-01/HB-02 same-receive-queue behavior, authenticated first-DATA boundary permutations, parallel stress, or UDP compatibility. HB-01/HB-02 remain **NOT RUN**.
+
+## Additional developer-reported Zephyr ↔ Raspberry Pi hardware regression — 2026-11-05 (770 s run)
+
+The developer supplied a subsequent terminal summary from a Zephyr ↔ Raspberry Pi STCP run. This is recorded separately from the previously reported 802-second run; no unique firmware hash, UTC start time, or complete raw logs were supplied with this summary.
+
+```text
+[00:12:49.585,784] <err> stcp_buffer_pool: STCP_POOL frame=0/16 large=0/2 peak=4/1 failures=0 static_bytes=35464 tx_wait=0 rx_defer=0
+SDK_ROBOT PASS suite=stress-sequential connection=200 tx=256 rx=256
+SDK_ROBOT PROGRESS 785/785 100% suite=stress-sequential elapsed=770s eta=0s
+SDK_ROBOT SKIP suite=stress-parallel reason=not_implemented
+SDK_ROBOT SKIP suite=udp-smoke reason=not_implemented
+SDK_ROBOT SKIP suite=udp-matrix reason=not_implemented
+SDK_ROBOT SUMMARY status=PASS passed=785 failed=0
+```
+
+**Result:** 785 passed, 0 failed, 770 seconds elapsed (12 min 50 sec). The 3 explicitly skipped suites are not counted as passed. At the reported snapshot, frame pool occupancy was 0/16 and large pool occupancy 0/2, with peak occupancy 4/1, zero reported allocation failures, and zero TX waits or RX deferrals. This indicates no outstanding pool buffers at that snapshot, not proof of complete absence of memory leaks. The diagnostic was emitted at ERROR log level, but the supplied line does not itself indicate a pool failure.
+
+**Evidence classification:** developer-reported real-hardware sequential STCP regression PASS; full raw logs and build revisions not independently verified. This does not validate controlled handshake-to-DATA queue coalescing or cryptographic first-DATA delivery. **HB-01/HB-02 remain NOT RUN.**
