@@ -63,3 +63,24 @@ The current `tests/test_handshake_boundary.py` was executed against the extracte
 Added `tests/stcp_first_data_live.py` to exercise immediate first application DATA over real Linux AF_STCP TCP-carried sockets, with a separate server and client, configurable iteration count, and exact payload checks. This is an **additional live smoke regression**, not a controlled HB-01/HB-02 same-receive-queue fixture. An attempted run in the analysis environment could not start because AF_STCP is unavailable there (Linux errno 97); therefore **no live PASS is claimed**.
 
 The HB-01/HB-02 deterministic wire-injection tests on actual Linux and Zephyr endpoints remain **NOT RUN**. Do not infer that TCP send batching forces receiver queue batching. The absence of peer identity authentication remains an intentional, already documented base-protocol property and is not a proposed change.
+
+## Live Linux-to-Raspberry-Pi evidence — 2026-11-05
+
+Developer-reported execution (not independently rerun by the author of this note):
+
+- Client: Linux development host, AF_STCP=45, protocol=253, TCP carrier.
+- Server: Raspberry Pi 192.168.1.242:19000, existing `stcp_ietf_echo` AF_STCP echo server.
+- Test: `tests/stcp_first_data_live.py --mode client --host 192.168.1.242 --port 19000 --iterations 100 --size 257 --timeout 15`, with an external 120-second process timeout.
+- Result: **100/100 PASS**, each connection echoed its 257-byte request exactly; 0 observed failures. Total verified echoed application payload: 25,700 bytes.
+- The initial Python test attempted nonblocking connect after `socket.settimeout()` and stalled in EINPROGRESS. A direct blocking AF_STCP connect and echo succeeded, and the client test was changed to connect in blocking mode before enabling per-operation timeouts (commit `acde39f`).
+- Scope: live Linux ↔ Raspberry Pi encrypted STCP echo interoperability and repeated connection setup. This is **not** a forced HB-01/HB-02 wire-ordering/coalescing test; the test does not observe internal receiver frame queue boundaries.
+
+### HB-01/HB-02 controlled-test prerequisites
+
+The next test must control *protocol frame arrival at the receiver's handshake parser*, not merely call TCP send twice or set TCP_NODELAY. A packet capture can show TCP segmentation but cannot by itself establish how frames were batched in the receiver's internal queue.
+
+- **HB-01:** valid peer PublicKey, HandshakeDone, then authenticated first DATA already queued before the handshake parser finishes; verify Ready and exact DATA delivery without Protocol error.
+- **HB-02:** valid HandshakeDone before PublicKey, then authenticated first DATA queued at the transition; verify Ready and exact DATA delivery without Protocol error.
+- Use a test-only transport/frame injection seam or deterministic parser fixture that accepts real encoded protocol frames and records the receiver's parser state and delivered plaintext. Do not alter production handshake semantics just to manufacture the test.
+- Required evidence: implementation commit/build ID, endpoint, frame bytes or capture, controlled injection order, parser queue/batch observation, Ready/terminal state, exact payload comparison, and explicit PASS/FAIL.
+- Until a receiver-level injection seam is available, mark both tests **NOT RUN**, even though the 100/100 live echo regression passed.
