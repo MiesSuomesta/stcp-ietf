@@ -55,3 +55,13 @@ The 2026-11-02 comparison found that the Linux handshake parser checks for compl
 ## Draft consequence
 
 If HB-01/HB-02 show the suspected Zephyr parser issue, correct the implementation and rerun before making broad cross-platform claims. The wire-level requirement to preserve and process valid post-handshake DATA must be specified independently of any Linux-specific parser implementation. No peer-identity authentication is proposed; its absence is already documented in the draft.
+
+## Source recheck — 2026-11-05 08:37:52 bundles
+
+Inspected the user-provided archives `stcp-project-05.11.2026-083752-STCP.zip` (`kernel/module/rust/src/session.rs`) and `stcp-project-05.11.2026-083752-SDK.zip` (`Zephyr/common/module/rust/src/session.rs`). Both handshake parsers check `have_handshake_inputs` **before** extracting the next wire frame. Their check combines a received/persisted peer HandshakeDone with a received peer key or ready crypto state. This supersedes the historical 2026-11-02 Zephyr missing-guard hypothesis for these sources.
+
+Executed the archived `tests/test_handshake_boundary.py` against those two extracted real source files: **5/5 PASS** (four model tests and one source-contract check). This is not an execution of the production parsers and does not validate cryptographic DATA decoding or actual receiver queue coalescing.
+
+The developer separately reported **100/100 PASS** Linux AF_STCP → Raspberry Pi STCP echo exchanges (257-byte payload each) using the blocking-connect regression script. This is live application-level evidence, not controlled HB-01/HB-02 evidence.
+
+**HB-01/HB-02 status remains NOT RUN.** The next implementation step is a test-only deterministic receive-queue/parser harness, with valid negotiated DATA ciphertext and a verified exactly-once plaintext result. Do not count source-contract PASS as hardware HB PASS.
