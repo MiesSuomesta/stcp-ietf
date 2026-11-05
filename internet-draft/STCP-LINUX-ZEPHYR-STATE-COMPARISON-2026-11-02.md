@@ -52,3 +52,14 @@ Each test should record: build revision, carrier, device, wire capture or determ
 ## Follow-up
 
 Confirm the suspected boundary divergence with a test that does not modify the production kernel or Zephyr implementation. If confirmed, treat it as an implementation issue for separate engineering review, not a reason to silently weaken the draft.
+
+
+## Update — 2026-11-05 source snapshot (supersedes the boundary-divergence hypothesis for current code)
+
+The 2026-11-02 findings above are retained as a historical source-snapshot analysis. New developer-provided archives `stcp-project-05.11.2026-080435-STCP.zip` and `stcp-project-05.11.2026-080435-SDK.zip` contain the current Linux and Zephyr `session.rs` implementations. **Both now include a pre-extraction `have_handshake_inputs` boundary check**, so the previously observed missing Zephyr guard is no longer present in this snapshot.
+
+The current `tests/test_handshake_boundary.py` was executed against the extracted Linux and Zephyr sources on 2026-11-05: **5 tests passed**, including the source-contract check. These are deterministic model/source tests, **not live wire integration tests**.
+
+Added `tests/stcp_first_data_live.py` to exercise immediate first application DATA over real Linux AF_STCP TCP-carried sockets, with a separate server and client, configurable iteration count, and exact payload checks. This is an **additional live smoke regression**, not a controlled HB-01/HB-02 same-receive-queue fixture. An attempted run in the analysis environment could not start because AF_STCP is unavailable there (Linux errno 97); therefore **no live PASS is claimed**.
+
+The HB-01/HB-02 deterministic wire-injection tests on actual Linux and Zephyr endpoints remain **NOT RUN**. Do not infer that TCP send batching forces receiver queue batching. The absence of peer identity authentication remains an intentional, already documented base-protocol property and is not a proposed change.
