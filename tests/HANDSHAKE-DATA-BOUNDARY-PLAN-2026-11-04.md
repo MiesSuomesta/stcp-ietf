@@ -65,3 +65,22 @@ Executed the archived `tests/test_handshake_boundary.py` against those two extra
 The developer separately reported **100/100 PASS** Linux AF_STCP → Raspberry Pi STCP echo exchanges (257-byte payload each) using the blocking-connect regression script. This is live application-level evidence, not controlled HB-01/HB-02 evidence.
 
 **HB-01/HB-02 status remains NOT RUN.** The next implementation step is a test-only deterministic receive-queue/parser harness, with valid negotiated DATA ciphertext and a verified exactly-once plaintext result. Do not count source-contract PASS as hardware HB PASS.
+
+## Developer-reported Zephyr modem ↔ Raspberry Pi hardware regression — 2026-11-05
+
+The developer supplied the terminal summary from a Zephyr modem ↔ Linux Raspberry Pi run:
+
+```text
+SDK_ROBOT PASS suite=stress-sequential connection=200 tx=256 rx=256
+SDK_ROBOT PROGRESS 785/785 100% suite=stress-sequential elapsed=802s eta=0s
+SDK_ROBOT SKIP suite=stress-parallel reason=not_implemented
+SDK_ROBOT SKIP suite=udp-smoke reason=not_implemented
+SDK_ROBOT SKIP suite=udp-matrix reason=not_implemented
+SDK_ROBOT SUMMARY status=PASS passed=785 failed=0
+```
+
+**Result:** 785 passed, 0 failed, 802 seconds elapsed (13 min 22 sec). The runner explicitly skipped stress-parallel, udp-smoke, and udp-matrix because they are not implemented; these are **not** counted as passed tests. The exact composition of the 785 checks and full raw run logs have not been independently audited here.
+
+During the run, periodic diagnostics reported `STCP_HEAP stage=socket-start requested=0 used=0 free=32680 peak=1184` and `STCP_POOL frame=0/16 large=0/2 peak=4/1 failures=0 static_bytes=35464 tx_wait=0 rx_defer=0`. These snapshots show no outstanding tracked heap allocation or occupied pool buffers at those points, and no reported pool allocation failures; they do not establish absence of all possible memory leaks. The diagnostic lines were emitted at ERROR logging level in the flashed firmware; the developer subsequently changed relevant source logging calls to DEBUG, but that change was not part of this recorded firmware run.
+
+**Evidence classification:** developer-reported real-hardware regression PASS. It supports sequential STCP interoperability and lifecycle/stress behavior under the executed suite. It does **not** establish controlled HB-01/HB-02 same-receive-queue behavior, authenticated first-DATA boundary permutations, parallel stress, or UDP compatibility. HB-01/HB-02 remain **NOT RUN**.
