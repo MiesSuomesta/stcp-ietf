@@ -10,12 +10,14 @@ same-receive-queue HB-01/HB-02 wire fixture.
 """
 import argparse
 import hashlib
+import os
+import signal
 import socket
 import threading
 import traceback
 from stcp_kernel_loopback import (
     AF_STCP, STCP_PROTO_TCP, _libc, _address_call,
-    _connect_with_timeout, _accept_with_timeout, receive_exact,
+    _accept_with_timeout, receive_exact,
 )
 
 def payload(i, size):
@@ -27,8 +29,11 @@ def run_client(host, port, timeout, iterations, size):
         expected = payload(i, size)
         try:
             with socket.socket(AF_STCP, socket.SOCK_STREAM, STCP_PROTO_TCP) as sock:
+                # AF_STCP currently completes handshake on blocking connect.
+                # Python settimeout() switches the fd to nonblocking and can
+                # leave this implementation in EINPROGRESS indefinitely.
+                _address_call(_libc.connect, sock, host, port)
                 sock.settimeout(timeout)
-                _connect_with_timeout(sock, host, port, timeout)
                 sock.sendall(expected)
                 actual = receive_exact(sock, size)
                 if actual != expected:
@@ -85,7 +90,7 @@ if __name__ == "__main__":
     ap.add_argument("--mode", choices=("client", "loopback"), default="client")
     ap.add_argument("--host", default="192.168.1.242", help="remote echo server in client mode")
     ap.add_argument("--port", type=int, default=19000)
-    ap.add_argument("--timeout", type=float, default=15.0)
+    ap.add_argument("--timeout", type=float, default=15.0, help="per-operation socket timeout after blocking connect; use external timeout(1) to bound connect")
     ap.add_argument("--iterations", type=int, default=32)
     ap.add_argument("--size", type=int, default=257)
     args = ap.parse_args()
