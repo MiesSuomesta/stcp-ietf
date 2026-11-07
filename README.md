@@ -5,11 +5,11 @@ STCP (Secure Transport Communication Protocol) — IETF Internet-Draft developme
 ## Intended standards status
 
 - **Draft identifier:** draft-paxsudos-stcp-00 (planned)
-- **Intended status:** Experimental
-- **Target RFC category:** Experimental
+- **Intended status:** Standards Track
+- **Target RFC maturity:** Proposed Standard
 - **Publication:** In preparation; not yet submitted to or approved by the IETF
 
-Experimental is the intended RFC category; this is an individual Internet-Draft under preparation, not an IETF-approved RFC. STCP deliberately does not authenticate peer identity in its base X25519 handshake; active man-in-the-middle attacks remain possible. Fatal cryptographic, protocol, or state inconsistencies require fail-closed connection termination, distinct from normal loss and retransmission. The specification must accurately describe the implementation, including security limitations, interoperability and IANA considerations.
+Standards Track (targeting Proposed Standard) is the intended outcome; this is an individual Internet-Draft under preparation, not an IETF-approved RFC. STCP deliberately does not authenticate peer identity in its base X25519 handshake; active man-in-the-middle attacks remain possible. Fatal cryptographic, protocol, or state inconsistencies require fail-closed connection termination, distinct from normal loss and retransmission. The specification must accurately describe the implementation, including security limitations, interoperability and IANA considerations.
 
 See [the technical source review](internet-draft/STCP-IETF-technical-review.md) for implementation findings and remaining work.
 
