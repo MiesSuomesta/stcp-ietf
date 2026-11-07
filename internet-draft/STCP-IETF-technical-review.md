@@ -15,13 +15,13 @@
 - Wire version constant is 3, distinct from product version 9.0.3-ietf.
 - Types: PublicKey=1, HandshakeDone=2, DataChunk=3, DataChunkEnd=4, Ack=5, Ping=6, Pong=7, Close=8, Reset=9.
 - Header decode rejects unknown versions/types and excessive payload lengths.
-- PublicKey max payload 64 bytes; HandshakeDone max payload zero.
+- PublicKey payload exactly 32 bytes (current protocol); HandshakeDone max payload zero.
 - Constants: nonce 8 bytes; authentication tag 16 bytes; UDP frame payload 60 KiB; stream frame payload 2 MiB. Distinguish these limits from maximum application message size.
 - FLAG_COMPRESSED=1 and FLAG_COMPRESSION_CAPABLE=2 are logical values encoded in descriptor flag bits.
 
 ## Verified from kernel/module/rust/src/crypto.rs
 
-- X25519 key exchange via C FFI, with 32-byte secret and 32-byte public key stored in a 64-byte wire key structure.
+- X25519 key exchange via C FFI, with 32-byte secret and 32-byte public key transmitted without padding (current protocol).
 - Separate client-to-server and server-to-client session keys, plus derived control keys.
 - AES-256-GCM is used for encrypted payloads and control tags.
 - Encryption/decryption accepts associated authenticated data (AAD), which may authenticate the header depending on call sites; trace these before making a normative claim.
@@ -53,8 +53,8 @@ This report intentionally excludes credentials and other secrets. Do not submit 
 ## Confirmed implementation behavior
 1. SocketState enumerates New, Bound, Listening, Handshake, Ready, Closed, Error (state.rs:44–52).
 2. start_handshake() requires Handshake state and an attached carrier, sends PublicKey, then calls progress_handshake() (session.rs:496–528).
-3. PublicKey is 64 bytes, the first 32 bytes containing the X25519 public key; send_public_key sets FLAG_COMPRESSION_CAPABLE (session.rs:540–580; crypto.rs:47–50).
-4. The receiver rejects PublicKey frames of lengths other than 64 and flags other than FLAG_COMPRESSION_CAPABLE; HandshakeDone must have zero payload (session.rs:613–625).
+3. PublicKey is 32 bytes and contains the X25519 public key; send_public_key sets FLAG_COMPRESSION_CAPABLE (session.rs:540–580; crypto.rs:47–50).
+4. The receiver rejects PublicKey frames of lengths other than 32 and flags other than FLAG_COMPRESSION_CAPABLE; HandshakeDone must have zero payload (session.rs:613–625).
 5. The parser explicitly supports HandshakeDone arriving before PublicKey. It stops at the handshake boundary so as not to consume application DATA (session.rs:596–637).
 6. Receiving the peer key triggers derive_session_keys() and sending a HandshakeDone (session.rs:638–657).
 7. Ready requires both crypto.ready() and peer_handshake_done (session.rs:659–693).
