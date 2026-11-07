@@ -2,7 +2,7 @@ name: STCP IETF checks
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'work/experimental-draft-finalization-20261107']
   pull_request:
     branches: [main]
   workflow_dispatch:
