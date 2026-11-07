@@ -67,8 +67,8 @@ class STCPVectorTests(unittest.TestCase):
         self.assertEqual(AESGCM(keys()["control"]).decrypt(b"\x00" * 4 + nonce, tag, hdr), b"")
 
     def test_header_flags_and_endianness(self):
-        self.assertEqual(frame_header(1, 64, 0x01020304, 0x05060708, 0x090a0b0c, 2).hex(),
-                         "b1000000400102030405060708090a0b0c")
+        self.assertEqual(frame_header(1, 32, 0x01020304, 0x05060708, 0x090a0b0c, 2).hex(),
+                         "b1000000200102030405060708090a0b0c")
 
     def test_aead_tampering_rejected(self):
         for tamper_offset in (5, -1):
