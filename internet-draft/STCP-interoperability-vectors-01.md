@@ -4,7 +4,7 @@ Status: independently computed candidate vectors, **not yet confirmed by Linux/Z
 
 ## PublicKey frame-length regression vector (current 32-octet format)
 
-The current protocol carries a raw 32-octet X25519 public key without the 32-octet padding present in the older source snapshot. For wire version 3, PublicKey type 1, flags 2, payload length 32, sequence 0x01020304, acknowledgment 0x05060708, and connection ID 0x090a0b0c, the 17-octet header is:
+The current protocol carries a raw 32-octet X25519 public key without padding. For wire version 3, PublicKey type 1, flags 2, payload length 32, sequence 0x01020304, acknowledgment 0x05060708, and connection ID 0x090a0b0c, the 17-octet header is:
 
     b1000000200102030405060708090a0b0c
 
