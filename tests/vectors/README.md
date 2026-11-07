@@ -14,11 +14,11 @@ The script checks:
 - AES-256-GCM DATA and authenticated ACK reference frames, using the complete encoded 17-byte header as AAD and the 12-byte IV formed as four zero bytes followed by the 8-byte wire nonce;
 - rejection of modified AAD, nonce/IV, and authentication tag.
 
-**Important:** These are independently generated reference values based on the current draft and technical source review, not yet proven identical to output from the Linux kernel module and Zephyr implementation. Do not call them implementation-verified or interoperable until both implementations are checked against these bytes.
+**Implementation evidence update (2026-11-07):** The implementer reports successful Linux native kernel crypto KATs (6/6), physical Zephyr device PSA AES-GCM KATs (7/7), and a host execution of the original Zephyr Rust KDF (four keys). See `tests/interoperability/linux-zephyr-crypto-kat-2026-11-07.md` for exact evidence and limitations. These results validate the tested operations; they do not establish complete live protocol interoperability or security certification.
 
 The test-only private keys are public and MUST NOT be used for real STCP connections.
 
-Still needed: comparison against live Linux/Zephyr source and executable tests; protocol-level invalid-frame, replay, sequence exhaustion and fail-closed test cases. A successful independent Python reference check does not verify the implementation or the complete protocol state machine.
+Still needed: complete production call-path verification and protocol-level invalid-frame, replay, sequence exhaustion and fail-closed tests, plus fresh Linux–Zephyr LTE interoperability tests. A successful independent Python reference check does not verify the implementation or the complete protocol state machine.
 
 ## Implementation comparison checkpoint (2026-11-07)
 
