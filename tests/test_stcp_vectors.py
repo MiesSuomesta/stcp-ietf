@@ -81,13 +81,6 @@ class STCPVectorTests(unittest.TestCase):
         self.assertEqual(frame[17:], public)
         self.assertEqual(int.from_bytes(frame[1:5], "big"), 32)
 
-    def test_public_key_old_64_octet_format_is_not_current(self):
-        public = keys()["client_public"]
-        old_payload = public + bytes(32)
-        self.assertEqual(len(old_payload), 64)
-        # The old padded payload must not satisfy current exact-length validation.
-        self.assertNotEqual(len(old_payload), 32)
-
     def test_aead_tampering_rejected(self):
         for tamper_offset in (5, -1):
             frame = bytearray.fromhex(EXPECTED["data"])
