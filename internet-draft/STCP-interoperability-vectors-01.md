@@ -2,6 +2,14 @@
 
 Status: independently computed candidate vectors, **not yet confirmed by Linux/Zephyr runtime tests**. Source basis: 2026-11-02 Linux module `kernel/module/rust/src/frame.rs` and `kernel/module/src/stcp_crypto.c`. All hex strings are lowercase, concatenated octets. These are PUBLIC test keys and MUST NOT be used in production.
 
+## PublicKey frame-length regression vector (current 32-octet format)
+
+The current protocol carries a raw 32-octet X25519 public key without the 32-octet padding present in the older source snapshot. For wire version 3, PublicKey type 1, flags 2, payload length 32, sequence 0x01020304, acknowledgment 0x05060708, and connection ID 0x090a0b0c, the 17-octet header is:
+
+    b1000000200102030405060708090a0b0c
+
+This vector checks header encoding only. It does not establish that the current Linux and Zephyr implementations accept the revised PublicKey payload; that requires current-build tests. The cryptographic primitive vectors below are based on the 2026-11-02 source snapshot and do not independently prove current-build interoperability.
+
 ## X25519
 
 Client private: `77076d0a7318a57d3c16c17251b26645df4c2f87ebc0992ab177fba51db92c2a`
