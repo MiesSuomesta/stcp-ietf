@@ -47,6 +47,46 @@ def main():
     control_label = b"STCP wire3 control AES256-GCM key\x01"
     check("client_control", hmac.new(c2s, control_label, hashlib.sha256).digest(), "213db01c7f1fcc65af75659b0b9578f64526caf04e62132215b2c9db39927799")
     check("server_control", hmac.new(s2c, control_label, hashlib.sha256).digest(), "0fe127aec8abf02645ca630084688d01dea9c53a29e5a3b379cebb23ab16a986")
+
+    # AES-256-GCM reference frames. Wire format: header || nonce64 || ciphertext || tag16.
+    # The C backend maps the 8-octet wire nonce to a 12-octet IV: zero32 || nonce64.
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    from cryptography.exceptions import InvalidTag
+
+    def authenticated_frame(name, key, header_hex, nonce_value, plaintext, expected_ciphertext, expected_tag):
+        aad = bytes.fromhex(header_hex)
+        wire_nonce = nonce_value.to_bytes(8, "big")
+        iv = bytes(4) + wire_nonce
+        encrypted = AESGCM(key).encrypt(iv, plaintext, aad)
+        check(name + "_ciphertext", encrypted[:-16], expected_ciphertext)
+        check(name + "_tag", encrypted[-16:], expected_tag)
+        assert AESGCM(key).decrypt(iv, encrypted, aad) == plaintext
+        # The 17-octet header is authenticated as AAD.
+        changed_header = bytearray(aad)
+        changed_header[-1] ^= 1
+        for bad_aad, bad_iv, bad_encrypted in (
+            (bytes(changed_header), iv, encrypted),
+            (aad, bytes(11) + bytes([iv[-1] ^ 1]), encrypted),
+            (aad, iv, encrypted[:-1] + bytes([encrypted[-1] ^ 1])),
+        ):
+            try:
+                AESGCM(key).decrypt(bad_iv, bad_encrypted, bad_aad)
+            except InvalidTag:
+                pass
+            else:
+                raise AssertionError(name + ": tampered frame accepted")
+        print("PASS " + name + "_tamper_rejection")
+
+    authenticated_frame(
+        "data_c2s", c2s, "3300000005000000010000000012345678", 1,
+        b"hello", "36d84580e1", "3bb1b16b32f7fcb83451f736c68a2609"
+    )
+    authenticated_frame(
+        "ack_c2s", hmac.new(c2s, control_label, hashlib.sha256).digest(),
+        "3500000000000000000000000112345678", 2,
+        b"", "", "23111c779fe99f554187012835b77030"
+    )
+
     print("Reference vectors PASS; Linux and Zephyr comparison remains pending.")
 
 
