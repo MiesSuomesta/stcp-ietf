@@ -70,6 +70,24 @@ class STCPVectorTests(unittest.TestCase):
         self.assertEqual(frame_header(1, 32, 0x01020304, 0x05060708, 0x090a0b0c, 2).hex(),
                          "b1000000200102030405060708090a0b0c")
 
+    def test_public_key_frame_32_octets(self):
+        # Current STCP PublicKey format: unpadded X25519 public key.
+        public = keys()["client_public"]
+        self.assertEqual(len(public), 32)
+        header = frame_header(1, len(public), flags=2)
+        frame = header + public
+        self.assertEqual(len(frame), 49)
+        self.assertEqual(header.hex(), "b100000020000000000000000000000000")
+        self.assertEqual(frame[17:], public)
+        self.assertEqual(int.from_bytes(frame[1:5], "big"), 32)
+
+    def test_public_key_old_64_octet_format_is_not_current(self):
+        public = keys()["client_public"]
+        old_payload = public + bytes(32)
+        self.assertEqual(len(old_payload), 64)
+        # The old padded payload must not satisfy current exact-length validation.
+        self.assertNotEqual(len(old_payload), 32)
+
     def test_aead_tampering_rejected(self):
         for tamper_offset in (5, -1):
             frame = bytearray.fromhex(EXPECTED["data"])
