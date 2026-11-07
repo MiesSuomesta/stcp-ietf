@@ -1,0 +1,49 @@
+{
+  "generated_utc": "2026-11-07T07:48:49.029682+00:00",
+  "host": "devaus",
+  "platform": "Linux-7.3.0-rc7-next-20261016-nyt-rokkaa-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "git_commit": "e568be017575ea1239653f36c0d251d9e8946d08",
+  "scope": "Offline reference tests only; not Linux/Zephyr interoperability evidence",
+  "checks": [
+    {
+      "name": "Crypto vectors",
+      "status": "PASS",
+      "command": [
+        "/srv/stcp-project/zephyr-stcp/.venv/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_stcp_vectors.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.167,
+      "stdout": "",
+      "stderr": "test_ack_frame (test_stcp_vectors.STCPVectorTests.test_ack_frame) ... ok\ntest_aead_tampering_rejected (test_stcp_vectors.STCPVectorTests.test_aead_tampering_rejected) ... ok\ntest_data_frame (test_stcp_vectors.STCPVectorTests.test_data_frame) ... ok\ntest_header_flags_and_endianness (test_stcp_vectors.STCPVectorTests.test_header_flags_and_endianness) ... ok\ntest_x25519_and_kdf (test_stcp_vectors.STCPVectorTests.test_x25519_and_kdf) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "name": "RFCXML structure",
+      "status": "PASS",
+      "duration_seconds": 0.001
+    },
+    {
+      "name": "RFCXML rendering",
+      "status": "PASS",
+      "command": [
+        "xml2rfc",
+        "--text",
+        "--out",
+        "/tmp/stcp-ietf-kk1eemtn/draft.txt",
+        "/srv/stcp-project/ietf/internet-draft/draft-paxsudos-stcp-00.xml"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.824,
+      "stdout": "",
+      "stderr": "/srv/stcp-project/ietf/internet-draft/draft-paxsudos-stcp-00.xml(3): Warning: The document date (2026-11-01) is more than 3 days away from today's date\n Created file /tmp/stcp-ietf-kk1eemtn/draft.txt\n"
+    }
+  ]
+}
