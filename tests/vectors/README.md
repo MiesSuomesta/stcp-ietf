@@ -19,3 +19,14 @@ The script checks:
 The test-only private keys are public and MUST NOT be used for real STCP connections.
 
 Still needed: comparison against live Linux/Zephyr source and executable tests; protocol-level invalid-frame, replay, sequence exhaustion and fail-closed test cases. A successful independent Python reference check does not verify the implementation or the complete protocol state machine.
+
+## Implementation comparison checkpoint (2026-11-07)
+
+A read-only inspection of `MiesSuomesta/STCP` branch `main` found:
+- `kernel/module/rust/src/frame.rs` declares `STCP_HEADER_LEN = 17`, `STCP_VERSION = 3`, and `STCP_PUBLIC_KEY_LEN = 64`.
+- `kernel/module/rust/src/crypto.rs` declares `X25519_KEY_LEN = 32` and `PUBLIC_KEY_WIRE_LEN = 64`.
+- `kernel/module/rust/src/session.rs` checks incoming PublicKey frame payloads against `PUBLIC_KEY_WIRE_LEN`.
+
+The existing technical source review describes a 32-byte PublicKey payload, which may reflect a different revision. **Do not conflate a 32-byte X25519 public key with a 64-byte PublicKey frame payload.** Resolve the layout and revision discrepancy by inspecting the active sender/receiver paths on both Linux and Zephyr before adding handshake vectors or normative payload-length claims.
+
+The independently calculated header, KDF, and AES-GCM values were recomputed with Python's cryptography library and matched the existing expected bytes. This does **not** establish that the live Linux or Zephyr code matches the reference. The ACK call in the reference script was inspected and its argument ordering is correct.
