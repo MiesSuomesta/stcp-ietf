@@ -29,7 +29,7 @@ The Rust `SocketState` enum is `New`, `Bound`, `Listening`, `Handshake`, `Ready`
 ## Handshake ordering and boundaries
 
 - `start_handshake()` requires internal Handshake state and an attached carrier. It emits local PublicKey and immediately retries parser progress, accounting for already queued peer handshake frames.
-- The PublicKey payload is checked for exactly `PUBLIC_KEY_WIRE_LEN` octets; the current draft describes this as 64 octets. Only COMPRESSION_CAPABLE is permitted among the received PublicKey flags.
+- The PublicKey payload is checked for exactly `PUBLIC_KEY_WIRE_LEN` octets; the current protocol requires 32 octets; the 2026-11-02 snapshot must not be treated as current-length conformance evidence. Only COMPRESSION_CAPABLE is permitted among the received PublicKey flags.
 - HandshakeDone requires an empty payload.
 - The parser accepts HandshakeDone before PublicKey and preserves the receipt across parser passes.
 - Once both the peer HandshakeDone and peer key/derived crypto are available, the parser stops consuming further frames as handshake input; this prevents early application DATA from being misclassified.
