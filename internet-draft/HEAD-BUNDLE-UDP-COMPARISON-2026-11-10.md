@@ -25,6 +25,16 @@ Revisions above are from the project bundle's `manifest/stcpv7-commits.txt`, not
 
 Neither inspected session path demonstrates a network-responsive congestion window. Further carrier-layer inspection and network-emulated testing are required before claiming safe unrestricted STCP-over-UDP Internet deployment. The earlier 2026-11-10 main-branch audit remains historical; this report supersedes its revision scope.
 
+## Additional direct ZIP verification — 2026-11-10
+
+Reopened the actual uploaded STCP ZIP, which contains **both** `kernel/module/rust/src/session.rs` and `Zephyr/common/module/rust/src/session.rs`; the separately uploaded SDK ZIP contains the same Zephyr session path. This confirms that the 8-versus-16 values are present in the delivered source, rather than inferred from GitHub branch names.
+
+The same `STCP_SEND_WINDOW` constant is also used to cap **out-of-order receive-frame count**, not only send admission: Linux session.rs lines 1409–1419 and Zephyr session.rs lines 1222–1234. Both paths separately enforce a byte-capacity `RX_REORDER_BUDGET` before accepting a reordered frame. Thus changing this constant would affect receive buffering and memory behavior as well as UDP transmission. No such change is justified by the present evidence.
+
+Both sources' retransmission loops show a four-frame-per-tick batch cap and per-frame RTO doubling; the Linux loop is at lines 1778–1812 and the Zephyr loop at lines 1541–1575. The inspected source contains no explicit `cwnd`, pacing, ECN, or token-bucket mechanism in the session files. This observation does not exclude carrier-level rate limiting.
+
+**Controlled test design, not executed:** test 0%, 1%, 5%, and 10% loss; 0/100/500-ms additional RTT; reordering and duplicate delivery; competing TCP flow; compare both sender directions, goodput, retransmits, pending-frame count, receiver reorder occupancy, peak memory, timeout rate and latency. Record the actual Linux/Zephyr commits, configuration, raw traces, and test harness revision. The existing 825/825 Robot result does not establish this loss/fairness matrix.
+
 ## Follow-up without production changes
 
 1. Trace the Zephyr and Linux carrier queues and all additional rate-limiting mechanisms.
