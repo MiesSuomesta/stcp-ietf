@@ -4,7 +4,7 @@ Status: **proposed normative decisions for review**, not yet adopted requirement
 
 ## Existing documented wire behavior
 
-1. A connection in Handshake sends a PublicKey frame containing a 64-octet payload. Octets 0–31 hold the local X25519 public key; the Linux implementation initializes octets 32–63 to zero.
+1. A connection in Handshake sends a PublicKey frame containing a 32-octet payload containing the local X25519 public key.
 2. A receiver checks PublicKey length and accepted flags; the current Linux implementation permits COMPRESSION_CAPABLE.
 3. Upon receiving the peer PublicKey, the endpoint derives directional traffic keys and sends an empty HandshakeDone.
 4. HandshakeDone may arrive before PublicKey. Ready is reached only when traffic keys are derived and the peer HandshakeDone was received.
@@ -12,9 +12,9 @@ Status: **proposed normative decisions for review**, not yet adopted requirement
 
 ## Candidate normative rules requiring implementation verification
 
-The following is **candidate wording**, not a claim that all current implementations comply:
+The following is **candidate wording**, not a claim that all current implementations comply; the 32-octet PublicKey format was confirmed in the 2026-11-07 Linux/Zephyr interoperability checks:
 
-- **HS-1 — PublicKey length:** A receiver **MUST** reject a PublicKey frame whose payload length is not exactly 64 octets.
+- **HS-1 — PublicKey length:** A receiver **MUST** reject a PublicKey frame whose payload length is not exactly 32 octets.
 - **HS-2 — HandshakeDone length:** A receiver **MUST** reject a HandshakeDone frame with a nonempty payload.
 - **HS-3 — Readiness:** An endpoint **MUST NOT** deliver protected application DATA as established traffic until its traffic keys are available and it has processed the peer HandshakeDone.
 - **HS-4 — Stream framing:** An endpoint **MUST** handle a PublicKey or HandshakeDone split across multiple TCP reads, and **MUST NOT** interpret incomplete frames as complete messages.
@@ -24,7 +24,7 @@ The following is **candidate wording**, not a claim that all current implementat
 
 | Question | Why it matters | Evidence needed |
 | --- | --- | --- |
-| Reserved PublicKey bytes 32–63 | Are nonzero values rejected or ignored? | Linux and Zephyr source inspection plus negative vector |
+| PublicKey length | Verify rejection of lengths other than 32 octets on Linux and Zephyr | Cross-platform malformed-frame negative vectors |
 | Flags on PublicKey and HandshakeDone | Which bits are mandatory, optional or invalid? | Decoder checks and cross-platform malformed-frame tests |
 | Duplicate PublicKey | Retransmission, key replacement, replay ambiguity | Both implementations' state transitions |
 | Duplicate or early HandshakeDone | Must be deterministic without permitting early DATA | Permutation tests and negative cases |
