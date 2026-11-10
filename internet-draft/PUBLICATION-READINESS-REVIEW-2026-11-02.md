@@ -15,6 +15,10 @@ This is an addendum; the 2026-11-02 assessment below remains historical and must
 - **UDP congestion safety: still open.** An eight-frame limit and retransmission bounds alone do not establish congestion control appropriate for arbitrary Internet paths. No new algorithm is asserted by this documentation update.
 - **Cryptographic lifecycle, compression, UDP datagram error semantics and RFCXML validation: still open** pending implementation-backed verification and fresh validation results.
 
+## UDP source audit checkpoint — 2026-11-10
+
+A read-only audit of the Linux STCP main-branch session source is recorded in [UDP-CONGESTION-SOURCE-AUDIT-2026-11-10.md](UDP-CONGESTION-SOURCE-AUDIT-2026-11-10.md). The inspected implementation bounds in-flight frames, retransmission batch size and retry count, and applies per-frame exponential RTO backoff. These mechanisms do not by themselves demonstrate adaptive congestion control for unrestricted STCP-over-UDP Internet deployment. Exact golden-tag Linux and Zephyr revisions and network-emulated loss/fairness tests remain required. No production implementation was changed.
+
 ## Confirmed from developer test output
 
 - xml2rfc 3.35.0 successfully rendered the draft to a 20 KB text file.
