@@ -2,6 +2,10 @@
 
 Status: **proposed normative decisions for review**, not yet adopted requirements. **Design decision confirmed 2026-11-04: the base STCP protocol does not and will not authenticate peer identity.** Source basis: `internet-draft/draft-paxsudos-stcp-00.xml`, `internet-draft/STCP-STATE-MACHINE-SOURCE-REVIEW-2026-11-02.md`, and `internet-draft/PUBLICATION-READINESS-REVIEW-2026-11-02.md`. Do not silently promote observed Linux implementation details to universal requirements.
 
+## Draft integration update — 2026-11-10
+
+The current draft now contains a dedicated Handshake Wire Requirements section specifying exact 32-octet PublicKey payloads, empty HandshakeDone payloads, Ready gating, early HandshakeDone handling, the handshake-to-DATA parser boundary, TCP partial-frame buffering, and fail-closed behavior for fatal handshake/cryptographic errors. These are adopted draft requirements, not proof that all malformed-frame and ordering tests have passed. Duplicate-frame handling, unsupported-version outcomes, timeout behavior, and controlled HB-01/HB-02 receiver-level injection remain open for verification. The base protocol continues to omit peer identity authentication by design.
+
 ## Existing documented wire behavior
 
 1. A connection in Handshake sends a PublicKey frame containing a 32-octet payload containing the local X25519 public key.
