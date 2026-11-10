@@ -35,6 +35,11 @@
 <li><t>The local connection transitions to Ready only when local traffic keys have been derived and a peer HandshakeDone has been received. An established application DATA frame must not be interpreted as a handshake frame.</t></li>
 </ol>
 <t>PublicKey and HandshakeDone are not protected by the established-session DATA or control authentication mechanism. In particular, HandshakeDone does not prove the peer's identity or cryptographically bind the full handshake transcript. The base protocol does not authenticate peer identity.</t>
+<section anchor="handshake-wire-requirements"><name>Handshake Wire Requirements</name>
+<t>A PublicKey frame carries exactly 32 octets of X25519 public-key material. A receiver MUST reject a PublicKey frame with any other payload length. A HandshakeDone frame carries no payload; a receiver MUST reject a nonempty HandshakeDone frame. The only permitted PublicKey flag in the reviewed implementations is COMPRESSION_CAPABLE. A receiver MUST NOT interpret an unknown flag as a negotiated capability.</t>
+<t>An endpoint MUST NOT enter the established application-data state until it has derived directional traffic keys from the peer PublicKey and received the peer HandshakeDone. A receiver MUST allow HandshakeDone to precede PublicKey and retain that event for the establishment decision. When both handshake inputs have been processed, a receiver MUST leave subsequent complete DATA frames for established-session processing rather than consuming them as unexpected handshake frames. Over TCP, an endpoint MUST buffer partial headers and payloads until a complete frame is available.</t>
+<t>These requirements do not mandate a particular internal state enumeration or parser-loop implementation. Exact wire-visible responses to duplicate handshake frames, invalid flags, unsupported versions, timeouts, and premature DATA remain under verification and are not assigned new error codes by this section. A fatal handshake or cryptographic error MUST NOT result in delivery of unauthenticated application DATA or continuation as an established connection.</t>
+</section>
 </section>
 <section anchor="kdf"><name>Directional Key Derivation</name>
 <t>The active Linux key derivation takes the 32-octet X25519 shared secret, the 32-octet client public key, and the 32-octet server public key, in that role-defined order. It computes:</t>
