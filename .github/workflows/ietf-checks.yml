@@ -2,7 +2,7 @@ name: STCP IETF checks
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'work/zephyr-evidence-handshake-20261104']
   pull_request:
     branches: [main]
   workflow_dispatch:
