@@ -2,6 +2,10 @@
 
 Status: independently computed candidate vectors, **not yet confirmed by Linux/Zephyr runtime tests**. Source basis: 2026-11-02 Linux module `kernel/module/rust/src/frame.rs` and `kernel/module/src/stcp_crypto.c`. All hex strings are lowercase, concatenated octets. These are PUBLIC test keys and MUST NOT be used in production.
 
+## Evidence update — 2026-11-10
+
+Developer-reported Linux/Zephyr interoperability checks on 2026-11-07 passed the 17-octet header and 32-octet PublicKey contracts, STCPv4 KDF label agreement, and X25519 vectors; Zephyr PSA known-answer tests were reported 7/7 PASS. The deterministic vectors below remain useful reference data, but this file does not contain independently inspected raw device logs or a byte-for-byte runtime comparison of every example frame. Retain that distinction until evidence artifacts and exact implementation revisions are linked here. The wire version field (3) and the STCPv4 key-derivation labels refer to different version domains and must not be conflated.
+
 ## X25519
 
 Client private: `77076d0a7318a57d3c16c17251b26645df4c2f87ebc0992ab177fba51db92c2a`
