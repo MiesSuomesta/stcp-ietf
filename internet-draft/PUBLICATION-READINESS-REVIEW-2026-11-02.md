@@ -4,6 +4,17 @@ Review date: 2026-11-02
 Scope: internet-draft/draft-paxsudos-stcp-00.xml in the stcp-ietf repository.
 This is an editorial/technical gap review, not an IETF review or approval.
 
+## Status update — 2026-11-10
+
+This is an addendum; the 2026-11-02 assessment below remains historical and must not be read as the current source snapshot.
+
+- **Peer authentication: design resolved.** The base STCP protocol deliberately does not authenticate peer identity. Active MITM key substitution remains possible and is explicitly disclosed. This is not a pending protocol feature; do not propose an identity/PKI layer as a publication prerequisite.
+- **PublicKey framing: updated.** The current draft specifies an exactly 32-octet X25519 PublicKey payload, not the 64-octet payload in the older snapshot.
+- **Handshake normative text: partly addressed.** The current draft now specifies PublicKey/HandshakeDone lengths, key-derived-plus-peer-Done readiness, Done-before-Key handling, TCP partial-frame buffering, the handshake-to-DATA boundary, and fail-closed behavior for fatal handshake/crypto errors. Negative-case wire behavior and receiver-level controlled ordering tests remain outstanding.
+- **Cross-platform evidence: newer developer-reported results exist.** On 2026-11-07, Linux/Zephyr interop checks reportedly passed for 17-octet headers, 32-octet public keys, KDF labels and X25519 vectors; Zephyr PSA KAT was reported 7/7 PASS. A separate Robot suite reportedly passed 825/825. These reports are not a substitute for attaching exact run logs, revisions, carrier-specific traces, and negative-case coverage to this repository.
+- **UDP congestion safety: still open.** An eight-frame limit and retransmission bounds alone do not establish congestion control appropriate for arbitrary Internet paths. No new algorithm is asserted by this documentation update.
+- **Cryptographic lifecycle, compression, UDP datagram error semantics and RFCXML validation: still open** pending implementation-backed verification and fresh validation results.
+
 ## Confirmed from developer test output
 
 - xml2rfc 3.35.0 successfully rendered the draft to a 20 KB text file.
