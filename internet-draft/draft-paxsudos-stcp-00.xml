@@ -75,4 +75,20 @@
 <section anchor="iana"><name>IANA Considerations</name><t>This initial version requests no allocation. The Linux STCP_PROTO_TCP value 253 and STCP_PROTO_UDP value 254 are local AF_STCP socket API selectors, not allocations in the IP Protocol Numbers registry. IP protocol number 253 is reserved for experimentation and is not a permanent STCP assignment. Direct STCP carriage over IP is not currently implemented and is outside the scope of this draft. No permanent IP protocol number is requested. Any future native-IP specification and allocation request require separate work.</t></section>
 <section anchor="open"><name>Outstanding Work</name><t>Before Standards Track publication, the draft needs complete normative state-machine and error rules, cross-platform verification of the KDF test vectors, carrier mapping, compression negotiation, UDP congestion control, security review, and interoperability evidence. This document does not claim IETF approval.</t></section>
 </middle>
-<back><references><name>Normative References</name><reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119"><front><title>Key words for use in RFCs to Indicate Requirement Levels</title><author fullname="Scott Bradner" initials="S." surname="Bradner"/><date year="1997" month="March"/></front><seriesInfo name="RFC" value="2119"/><seriesInfo name="DOI" value="10.17487/RFC2119"/></reference><reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174"><front><title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title><author fullname="Barry Leiba" initials="B." surname="Leiba"/><date year="2017" month="May"/></front><seriesInfo name="RFC" value="8174"/><seriesInfo name="DOI" value="10.17487/RFC8174"/></reference></references></back></rfc>
+<back><references><name>Normative References</name><reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119"><front><title>Key words for use in RFCs to Indicate Requirement Levels</title><author fullname="Scott Bradner" initials="S." surname="Bradner"/><date year="1997" month="March"/></front><seriesInfo name="RFC" value="2119"/><seriesInfo name="DOI" value="10.17487/RFC2119"/></reference><reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174"><front><title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title><author fullname="Barry Leiba" initials="B." surname="Leiba"/><date year="2017" month="May"/></front><seriesInfo name="RFC" value="8174"/><seriesInfo name="DOI" value="10.17487/RFC8174"/></reference></references>
+<section anchor="control-test-vector"><name>Protected ACK Test Vector</name>
+<t>This vector checks the directional control key derivation and the protected ACK format. All values below are hexadecimal octets. The ACK uses sequence 0, acknowledgment 7, connection ID 123 (decimal), nonce 1, and empty plaintext.</t>
+<artwork><![CDATA[
+Directional DATA key:
+  000102030405060708090a0b0c0d0e0f
+  101112131415161718191a1b1c1d1e1f
+Derived control key:
+  57fe34c7129e685b169dd64eccc7ed2c5
+  2fd64f2029a94b3c75e98d3b0ad6063
+Encoded header (AAD): 350000001800000000000000070000007b
+Transmitted nonce:    0000000000000001
+GCM IV:               000000000000000000000001
+Authentication tag:   7df605aefc1a6aaac1a109e5f27dfd42
+]]></artwork>
+</section>
+</back></rfc>
