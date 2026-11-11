@@ -44,15 +44,15 @@
 </section>
 </section>
 <section anchor="kdf"><name>Directional Key Derivation</name>
-<t>The active Linux key derivation takes the 32-octet X25519 shared secret, the 32-octet client public key, and the 32-octet server public key, in that role-defined order. It computes:</t>
+<t>Endpoints MUST derive the directional DATA keys from the 32-octet X25519 shared secret and the two 32-octet public keys. The salt input orders the public keys by role, with the client public key first, regardless of frame arrival order. The derivation is:</t>
 <ol>
 <li><t>salt = SHA-256(ASCII("STCPv4-AES256-GCM-HKDF-SHA256") || client_public_key || server_public_key).</t></li>
 <li><t>PRK = HMAC-SHA256(key=salt, message=shared_secret).</t></li>
 <li><t>client_to_server_key = HMAC-SHA256(key=PRK, message=ASCII("STCPv4 AES256-GCM client to server key") || 0x01).</t></li>
 <li><t>server_to_client_key = HMAC-SHA256(key=PRK, message=ASCII("STCPv4 AES256-GCM server to client key") || 0x01).</t></li>
-<li><t>For each direction, control_key = HMAC-SHA256(key=directional_data_key, message=ASCII("STCP wire3 control AES256-GCM key") || 0x01).</t></li>
 </ol>
-<t>ASCII strings do not include a terminating NUL octet. The client uses the client-to-server key for transmission and the server-to-client key for reception; the server uses the reverse assignment. The reviewed code rejects identical directional keys. The STCPv4 directional key-derivation labels shown here were checked in Linux and Zephyr interoperability work on 2026-11-07. This draft does not claim that every key-lifecycle and reconnect path has been verified.</t>
+<t>The operator <tt>||</tt> denotes byte concatenation. Endpoints MUST encode the labels exactly as shown in ASCII, without a terminating NUL. The suffix 0x01 is a single octet. The client MUST use the client-to-server DATA key for transmission and the server-to-client DATA key for reception. The server MUST use the reverse assignment. If the two directional DATA keys are equal, the endpoint MUST terminate the connection. Derive each directional control key as specified in <xref target="protection"/>.</t>
+<t>The literal <tt>STCPv4</tt> prefix is part of the DATA key derivation labels for wire version 3.</t>
 </section>
 <section anchor="protection"><name>Packet Protection</name>
 <t>DataChunk and DataChunkEnd frames MUST use AES-256-GCM with the directional DATA key. The payload consists of an 8-octet unsigned nonce in network byte order, the ciphertext, and a 16-octet authentication tag. The payload length in the header includes all three fields.</t>
@@ -73,6 +73,6 @@
 </section>
 <section anchor="security"><name>Security Considerations</name><t>Because the base handshake lacks peer identity authentication, an active man-in-the-middle can substitute public keys. AES-GCM protection after key establishment does not prevent this attack. Nonce uniqueness, session-key freshness, reconnect behavior, and cross-platform interoperability require further verification. The connection ID is not an authentication credential.</t></section>
 <section anchor="iana"><name>IANA Considerations</name><t>This initial version requests no allocation. The Linux STCP_PROTO_TCP value 253 and STCP_PROTO_UDP value 254 are local AF_STCP socket API selectors, not allocations in the IP Protocol Numbers registry. IP protocol number 253 is reserved for experimentation and is not a permanent STCP assignment. Direct STCP carriage over IP is not currently implemented and is outside the scope of this draft. No permanent IP protocol number is requested. Any future native-IP specification and allocation request require separate work.</t></section>
-<section anchor="open"><name>Outstanding Work</name><t>Before Standards Track publication, the draft needs complete normative state-machine and error rules, independent KDF test vectors, carrier mapping, compression negotiation, UDP congestion control, security review, and interoperability evidence. This document does not claim IETF approval.</t></section>
+<section anchor="open"><name>Outstanding Work</name><t>Before Standards Track publication, the draft needs complete normative state-machine and error rules, cross-platform verification of the KDF test vectors, carrier mapping, compression negotiation, UDP congestion control, security review, and interoperability evidence. This document does not claim IETF approval.</t></section>
 </middle>
 <back><references><name>Normative References</name><reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119"><front><title>Key words for use in RFCs to Indicate Requirement Levels</title><author fullname="Scott Bradner" initials="S." surname="Bradner"/><date year="1997" month="March"/></front><seriesInfo name="RFC" value="2119"/><seriesInfo name="DOI" value="10.17487/RFC2119"/></reference><reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174"><front><title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title><author fullname="Barry Leiba" initials="B." surname="Leiba"/><date year="2017" month="May"/></front><seriesInfo name="RFC" value="8174"/><seriesInfo name="DOI" value="10.17487/RFC8174"/></reference></references></back></rfc>
