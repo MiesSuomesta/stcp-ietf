@@ -59,6 +59,26 @@ class STCPVectorTests(unittest.TestCase):
         self.assertEqual((hdr + nonce + result).hex(), EXPECTED["data"])
         self.assertEqual(AESGCM(keys()["c2s"]).decrypt(b"\x00" * 4 + nonce, result, hdr), b"hello")
 
+    def test_compressed_data_frame(self):
+        # Raw LZ4 block for 130 copies of 0x41, as published in the draft.
+        block = bytes.fromhex("1f41010069504141414141")
+        original_length = 130
+        prefix = bytes([(original_length & 0x7f) | 0x80, original_length >> 7])
+        plaintext = prefix + block
+        header = frame_header(3, len(plaintext) + 24, 2, 0, 0x12345678, flags=1)
+        nonce = (2).to_bytes(8, "big")
+        aead = AESGCM(keys()["c2s"])
+        iv = bytes(4) + nonce
+        protected = aead.encrypt(iv, plaintext, header)
+        self.assertEqual(
+            (header + nonce + protected).hex(),
+            "7300000025000000020000000012345678"
+            "0000000000000002"
+            "2e73cca12c24aaa7772ee32da4"
+            "7a197ffd199007e5893080075bf0f73a",
+        )
+        self.assertEqual(aead.decrypt(iv, protected, header), plaintext)
+
     def test_ack_frame(self):
         hdr = frame_header(5, 24, 0, 1, 0x12345678)
         nonce = (1).to_bytes(8, "big")
