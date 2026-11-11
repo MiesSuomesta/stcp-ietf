@@ -33,4 +33,3 @@ The currently available evidence is insufficient to claim STCP-over-UDP is conge
 2. Audit kernel carrier transmit/error behavior for loss and `EAGAIN` propagation.
 3. Run controlled loss/RTT/reordering/fairness tests on both implementations with the exact uploaded revisions and test configurations.
 4. Update normative text only after the implemented behavior is demonstrated.
-
