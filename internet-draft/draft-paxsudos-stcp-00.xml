@@ -76,6 +76,51 @@
 <section anchor="open"><name>Outstanding Work</name><t>Before Standards Track publication, the draft needs complete normative state-machine and error rules, cross-platform verification of the KDF test vectors, carrier mapping, compression negotiation, UDP congestion control, security review, and interoperability evidence. This document does not claim IETF approval.</t></section>
 </middle>
 <back><references><name>Normative References</name><reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119"><front><title>Key words for use in RFCs to Indicate Requirement Levels</title><author fullname="Scott Bradner" initials="S." surname="Bradner"/><date year="1997" month="March"/></front><seriesInfo name="RFC" value="2119"/><seriesInfo name="DOI" value="10.17487/RFC2119"/></reference><reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174"><front><title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title><author fullname="Barry Leiba" initials="B." surname="Leiba"/><date year="2017" month="May"/></front><seriesInfo name="RFC" value="8174"/><seriesInfo name="DOI" value="10.17487/RFC8174"/></reference></references>
+<section anchor="data-test-vector"><name>Directional DATA Key and Frame Test Vector</name>
+<t>All values below are hexadecimal octets. The private inputs are for testing only. The frame is a client-to-server DataChunk with flags 0, sequence 1, acknowledgment 0, connection ID 0x12345678, and nonce 1.</t>
+<artwork><![CDATA[
+Client private input:
+  77076d0a7318a57d3c16c17251b26645
+  df4c2f87ebc0992ab177fba51db92c2a
+Server private input:
+  5dab087e624a8a4b79e17f8b83800ee6
+  6f3bb1292618b6fd1c2f8b27ff88e0eb
+Client public key:
+  8520f0098930a754748b7ddcb43ef75a
+  0dbf3a0d26381af4eba4a98eaa9b4e6a
+Server public key:
+  de9edb7d7b7dc1b4d35b61c2ece43537
+  3f8343c85b78674dadfc7e146f882b4f
+Shared secret:
+  4a5d9d5ba4ce2de1728e3bf480350f25
+  e07e21c947d19e3376f09b3c1e161742
+Salt:
+  68789ffabafa9cb7c2895c3a211ef17a
+  adbdc15a22669984f0cfdfbeddcc6fdd
+PRK:
+  6bd56a3c28264f96f858a078e0a34e50
+  02cc39f6e8cbe0f8ed6b724fbacbb9aa
+Client-to-server DATA key:
+  4a78b69f86818b6027f82f9b21cfa799
+  083898eaa988d9ef70ce8ddff650c62e
+Server-to-client DATA key:
+  a58ede41164232df21c8d31852d0c786
+  3afb9ca54defd3126615d63f5d280e51
+Encoded header (AAD):
+  330000001d0000000100000000123456
+  78
+Transmitted nonce:
+  0000000000000001
+GCM IV:
+  000000000000000000000001
+Plaintext:
+  68656c6c6f
+Ciphertext:
+  8f577af326
+Authentication tag:
+  079aae12b967b491f1edf9a00ff91477
+]]></artwork>
+</section>
 <section anchor="control-test-vector"><name>Protected ACK Test Vector</name>
 <t>This vector checks the directional control key derivation and the protected ACK format. All values below are hexadecimal octets. The ACK uses sequence 0, acknowledgment 7, connection ID 123 (decimal), nonce 1, and empty plaintext.</t>
 <artwork><![CDATA[
