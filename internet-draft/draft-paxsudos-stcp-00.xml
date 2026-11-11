@@ -126,6 +126,18 @@ Authentication tag:
   079aae12b967b491f1edf9a00ff91477
 ]]></artwork>
 </section>
+<section anchor="compression-test-vector"><name>Compressed DATA Test Vector</name>
+<t>This example uses the client-to-server DATA key from <xref target="data-test-vector"/>. The original DATA is 130 copies of octet 0x41. The compressed DataChunk uses sequence 2, acknowledgment 0, connection ID 0x12345678, and nonce 2. The length prefix is 0x82 followed by 0x01. The values below are hexadecimal octets. Other valid LZ4 encodings of the same DATA can produce different ciphertext.</t>
+<artwork><![CDATA[
+Raw LZ4 block                  1f41010069504141414141
+Plaintext with length prefix   82011f41010069504141414141
+Encoded header (AAD)           7300000025000000020000000012345678
+Transmitted nonce              0000000000000002
+GCM IV                         000000000000000000000002
+Ciphertext                     2e73cca12c24aaa7772ee32da4
+Authentication tag             7a197ffd199007e5893080075bf0f73a
+]]></artwork>
+</section>
 <section anchor="control-test-vector"><name>Protected ACK Test Vector</name>
 <t>This vector checks the directional control key derivation and the protected ACK format. All values below are hexadecimal octets. The ACK uses sequence 0, acknowledgment 7, connection ID 123 (decimal), nonce 1, and empty plaintext.</t>
 <artwork><![CDATA[
